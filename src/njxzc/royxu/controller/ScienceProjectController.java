@@ -15,6 +15,8 @@ import njxzc.royxu.searchmodel.SearchScienceProject;
 import njxzc.royxu.service.AttachmentServiceImpl;
 import njxzc.royxu.service.ScienceProjectServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +35,7 @@ import com.util.StringUtil;
  */
 @Controller
 public class ScienceProjectController {
+	private static final Logger LOG = LoggerFactory.getLogger(ScienceProjectController.class);
 	
 	@Autowired
 	private ScienceProjectServiceImpl scienceProjectService;
@@ -85,6 +88,7 @@ public class ScienceProjectController {
 			}
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -103,6 +107,7 @@ public class ScienceProjectController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -130,6 +135,7 @@ public class ScienceProjectController {
 			}
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -146,6 +152,7 @@ public class ScienceProjectController {
 			mav.addObject("rows", scienceProjects);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -162,6 +169,7 @@ public class ScienceProjectController {
 			mav.addObject("rows", scienceProjects);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -178,6 +186,7 @@ public class ScienceProjectController {
 			mav.addObject("rows", scienceProjects);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -202,7 +211,7 @@ public class ScienceProjectController {
 			scienceProjectService.deleteScienceProjects(scienceProjects);
 			mav.addObject("success",true);
 		}catch(Exception e){
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -217,6 +226,7 @@ public class ScienceProjectController {
 			scienceProjectService.deleteScienceProject(scienceProject);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -268,6 +278,7 @@ public class ScienceProjectController {
 			}
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

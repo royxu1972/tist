@@ -10,6 +10,8 @@ import njxzc.royxu.domain.Notice;
 import njxzc.royxu.searchmodel.DataGridModel;
 import njxzc.royxu.service.NoticeServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +29,7 @@ import com.util.DateUtil;
  */
 @Controller
 public class NoticeController {
+	private static final Logger LOG = LoggerFactory.getLogger(NoticeController.class);
 	
 	@Autowired
 	private NoticeServiceImpl noticeService;
@@ -40,6 +43,7 @@ public class NoticeController {
 			noticeService.saveNotice(notice);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -61,6 +65,7 @@ public class NoticeController {
 			mav.addObject("totalpage", totalpage);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -77,6 +82,7 @@ public class NoticeController {
 			mav.addObject("rows", notices);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -92,6 +98,7 @@ public class NoticeController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -107,6 +114,7 @@ public class NoticeController {
 			mav.addObject("rows", notices);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -129,6 +137,7 @@ public class NoticeController {
 			noticeService.deleteNotices(notices);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -143,6 +152,7 @@ public class NoticeController {
 			noticeService.deleteNoticeAndFile(notice);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -158,6 +168,7 @@ public class NoticeController {
 			noticeService.updateNotice(notice);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

@@ -14,6 +14,8 @@ import njxzc.royxu.service.MenuServiceImpl;
 import njxzc.royxu.service.RoleMenuServiceImpl;
 import njxzc.royxu.service.RoleServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,8 @@ import com.util.StringUtil;
 
 @Controller
 public class RoleController {
+	private static final Logger LOG = LoggerFactory.getLogger(RoleController.class);
+	
 	@Autowired
 	RoleServiceImpl roleService;
 	@Autowired
@@ -46,6 +50,7 @@ public class RoleController {
 			roleService.saveRole(role);
 			mav.addObject("success", true);
 		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -81,6 +86,7 @@ public class RoleController {
 				mav.addObject("msg", "获取role_id失败");
 			}
 		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -98,6 +104,7 @@ public class RoleController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success", true);
 		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -111,6 +118,7 @@ public class RoleController {
 			mav.addObject("rows", roleService.loadAllRoles());
 			mav.addObject("success", true);
 		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -124,6 +132,7 @@ public class RoleController {
 			roleService.deleteRole(role);
 			mav.addObject("success", true);
 		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -140,6 +149,7 @@ public class RoleController {
 			roleService.updateRole(role);
 			mav.addObject("success", true);
 		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -169,6 +179,7 @@ public class RoleController {
 			}
 			mav.addObject("success", true);
 		} catch (Exception e) {
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

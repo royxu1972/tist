@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,8 @@ import com.util.generate.Generate;
 
 @Controller
 public class CodeGenerateController {
+	private static final Logger LOG = LoggerFactory.getLogger(CodeGenerateController.class);
+	
 	static Map<String,String> map = new HashMap<String,String>();
 	static {
 		map.put("int", "int");
@@ -50,6 +54,7 @@ public class CodeGenerateController {
 			mav.addObject("module_generate",module_generate);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

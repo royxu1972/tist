@@ -15,6 +15,8 @@ import njxzc.royxu.searchmodel.SearchPaper;
 import njxzc.royxu.service.AttachmentServiceImpl;
 import njxzc.royxu.service.PaperServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +35,7 @@ import com.util.StringUtil;
  */
 @Controller
 public class PaperController {
+	private static final Logger LOG = LoggerFactory.getLogger(PaperController.class);
 	
 	@Autowired
 	private PaperServiceImpl paperService;
@@ -86,6 +89,7 @@ public class PaperController {
 			}
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -104,6 +108,7 @@ public class PaperController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -131,6 +136,7 @@ public class PaperController {
 			}
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -147,6 +153,7 @@ public class PaperController {
 			mav.addObject("rows", papers);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -163,6 +170,7 @@ public class PaperController {
 			mav.addObject("rows", papers);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -186,6 +194,7 @@ public class PaperController {
 			paperService.deletePapers(papers);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -200,6 +209,7 @@ public class PaperController {
 			paperService.deletePaper(paper);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -251,6 +261,7 @@ public class PaperController {
 			}
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

@@ -10,6 +10,8 @@ import njxzc.royxu.searchmodel.DataGridModel;
 import njxzc.royxu.service.MenuServiceImpl;
 import njxzc.royxu.service.RoleMenuServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +27,7 @@ import com.core.Page;
  */
 @Controller
 public class RoleMenuController {
+	private static final Logger LOG = LoggerFactory.getLogger(RoleMenuController.class);
 	
 	@Autowired
 	private RoleMenuServiceImpl roleMenuService;
@@ -39,6 +42,7 @@ public class RoleMenuController {
 			roleMenuService.saveRoleMenu(roleMenu);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -57,6 +61,7 @@ public class RoleMenuController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -73,6 +78,7 @@ public class RoleMenuController {
 			mav.addObject("rows", roleMenus);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -91,7 +97,7 @@ public class RoleMenuController {
 			mav.addObject("rows", menus);
 			mav.addObject("success",true);
 		}catch(Exception e){
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -114,6 +120,7 @@ public class RoleMenuController {
 //			roleMenuService.deleteRoleMenus(roleMenus);
 //			mav.addObject("success",true);
 //		}catch(Exception e){
+//			LOG.error(e.getMessage(), e);
 //			mav.addObject("success", false);
 //			mav.addObject("msg", e.getMessage());
 //		}
@@ -128,6 +135,7 @@ public class RoleMenuController {
 			roleMenuService.deleteRoleMenu(roleMenu);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -142,6 +150,7 @@ public class RoleMenuController {
 			roleMenuService.updateRoleMenu(roleMenu);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

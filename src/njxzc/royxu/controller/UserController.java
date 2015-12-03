@@ -149,6 +149,7 @@ public class UserController {
 			userService.saveUser(user);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -166,6 +167,7 @@ public class UserController {
 			userService.saveUser(user);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -183,6 +185,7 @@ public class UserController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -198,6 +201,7 @@ public class UserController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -229,6 +233,7 @@ public class UserController {
 			}
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -250,6 +255,7 @@ public class UserController {
 			userService.delteUsers(users);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -266,6 +272,7 @@ public class UserController {
 			userService.updateUser(user);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -307,7 +314,7 @@ public class UserController {
 			}
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 			return "false";
 		}
 	}
@@ -332,7 +339,7 @@ public class UserController {
 			}
 			
 		} catch (Exception e) {
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 			return "false";
 		}
 	}
@@ -347,8 +354,7 @@ public class UserController {
 			System.out.println("------------------------\n"+user.getUser_id()+"\t"+user.getUser_password());
 			mav.addObject("success",true);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 			mav.addObject("msg",e.getMessage());
 			mav.addObject("success",false);
 		}

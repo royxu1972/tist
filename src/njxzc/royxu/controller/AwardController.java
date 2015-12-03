@@ -10,6 +10,8 @@ import njxzc.royxu.searchmodel.DataGridModel;
 import njxzc.royxu.searchmodel.SearchAward;
 import njxzc.royxu.service.AwardServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +27,7 @@ import com.core.Page;
  */
 @Controller
 public class AwardController {
+	private static final Logger LOG = LoggerFactory.getLogger(AwardController.class);
 	
 	@Autowired
 	private AwardServiceImpl awardService;
@@ -38,6 +41,7 @@ public class AwardController {
 			awardService.saveAward(award);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -56,6 +60,7 @@ public class AwardController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -82,6 +87,7 @@ public class AwardController {
 				mav.addObject("success",false);
 			}
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -98,6 +104,7 @@ public class AwardController {
 			mav.addObject("rows", awards);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -115,6 +122,7 @@ public class AwardController {
 			mav.addObject("rows", awards);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -137,6 +145,7 @@ public class AwardController {
 			awardService.deleteAwards(awards);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -151,6 +160,7 @@ public class AwardController {
 			awardService.deleteAward(award);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -165,6 +175,7 @@ public class AwardController {
 			awardService.updateAward(award);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

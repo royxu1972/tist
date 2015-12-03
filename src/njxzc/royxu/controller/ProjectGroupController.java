@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.core.Page;
-import njxzc.royxu.searchmodel.DataGridModel;
 
+import njxzc.royxu.searchmodel.DataGridModel;
 import njxzc.royxu.domain.ProjectGroup;
 import njxzc.royxu.service.ProjectGroupServiceImpl;
 
@@ -24,6 +26,7 @@ import njxzc.royxu.service.ProjectGroupServiceImpl;
  */
 @Controller
 public class ProjectGroupController {
+	private static final Logger LOG = LoggerFactory.getLogger(ProjectGroupController.class);
 	
 	@Autowired
 	private ProjectGroupServiceImpl projectGroupService;
@@ -36,6 +39,7 @@ public class ProjectGroupController {
 			projectGroupService.saveProjectGroup(projectGroup);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -54,6 +58,7 @@ public class ProjectGroupController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -69,6 +74,7 @@ public class ProjectGroupController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -85,6 +91,7 @@ public class ProjectGroupController {
 			mav.addObject("rows", projectGroups);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -107,6 +114,7 @@ public class ProjectGroupController {
 //			projectGroupService.deleteProjectGroups(projectGroups);
 //			mav.addObject("success",true);
 //		}catch(Exception e){
+//			LOG.error(e.getMessage(), e);
 //			mav.addObject("success", false);
 //			mav.addObject("msg", e.getMessage());
 //		}
@@ -121,6 +129,7 @@ public class ProjectGroupController {
 			projectGroupService.deleteProjectGroup(projectGroup);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -135,6 +144,7 @@ public class ProjectGroupController {
 			projectGroupService.updateProjectGroup(projectGroup);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

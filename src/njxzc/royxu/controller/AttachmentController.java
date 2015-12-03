@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,6 +40,7 @@ import njxzc.royxu.service.AttachmentServiceImpl;
  */
 @Controller
 public class AttachmentController {
+	private static final Logger LOG = LoggerFactory.getLogger(AttachmentController.class);
 	
 	@Autowired
 	private AttachmentServiceImpl attachmentService;
@@ -69,8 +72,10 @@ public class AttachmentController {
             }  
             inputStream.close();  
         } catch (FileNotFoundException e) {  
+        	LOG.error(e.getMessage(), e);
             e.printStackTrace();  
         } catch (IOException e) {  
+        	LOG.error(e.getMessage(), e);
             e.printStackTrace();  
         }  
     }
@@ -83,6 +88,7 @@ public class AttachmentController {
 			attachmentService.saveAttachment(attachment);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -101,6 +107,7 @@ public class AttachmentController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -116,6 +123,7 @@ public class AttachmentController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -132,6 +140,7 @@ public class AttachmentController {
 			mav.addObject("rows", attachments);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -154,6 +163,7 @@ public class AttachmentController {
 			attachmentService.deleteAttachments(attachments);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -168,6 +178,7 @@ public class AttachmentController {
 			attachmentService.deleteAttachment(attachment);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -184,7 +195,7 @@ public class AttachmentController {
 			mav.addObject("success",true);
 			FileUtils.deleteFile(attachment.getFile_path());
 		}catch(Exception e){
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -199,6 +210,7 @@ public class AttachmentController {
 			attachmentService.updateAttachment(attachment);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

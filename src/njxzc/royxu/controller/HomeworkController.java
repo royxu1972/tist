@@ -16,6 +16,8 @@ import njxzc.royxu.searchmodel.SearchHomework;
 import njxzc.royxu.service.AttachmentServiceImpl;
 import njxzc.royxu.service.HomeworkServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,6 +37,7 @@ import com.util.StringUtil;
  */
 @Controller
 public class HomeworkController {
+	private static final Logger LOG = LoggerFactory.getLogger(HomeworkController.class);
 	
 	@Autowired
 	private HomeworkServiceImpl homeworkService;
@@ -89,6 +92,7 @@ public class HomeworkController {
 			}
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -107,6 +111,7 @@ public class HomeworkController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -134,6 +139,7 @@ public class HomeworkController {
 			}
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -151,6 +157,7 @@ public class HomeworkController {
 			mav.addObject("success",true);
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -167,6 +174,7 @@ public class HomeworkController {
 			mav.addObject("rows", homeworks);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -194,6 +202,7 @@ public class HomeworkController {
 				mav.addObject("success",false);
 			}
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -210,6 +219,7 @@ public class HomeworkController {
 			mav.addObject("rows", homeworks);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -226,6 +236,7 @@ public class HomeworkController {
 			mav.addObject("rows", homeworks);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -250,6 +261,7 @@ public class HomeworkController {
 			homeworkService.deleteHomeworks(homeworks);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -264,6 +276,7 @@ public class HomeworkController {
 			homeworkService.deleteHomework(homework);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -316,6 +329,7 @@ public class HomeworkController {
 			}
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

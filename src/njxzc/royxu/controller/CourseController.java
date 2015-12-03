@@ -15,6 +15,8 @@ import njxzc.royxu.searchmodel.SearchCourse;
 import njxzc.royxu.service.AttachmentServiceImpl;
 import njxzc.royxu.service.CourseServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +35,7 @@ import com.util.StringUtil;
  */
 @Controller
 public class CourseController {
+	private static final Logger LOG = LoggerFactory.getLogger(CourseController.class);
 	
 	@Autowired
 	private CourseServiceImpl courseService;
@@ -85,6 +88,7 @@ public class CourseController {
 			courseService.saveCourse(course);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -103,6 +107,7 @@ public class CourseController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -130,6 +135,7 @@ public class CourseController {
 			}
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -146,6 +152,7 @@ public class CourseController {
 			mav.addObject("rows", courses);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -174,6 +181,7 @@ public class CourseController {
 			}
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -190,6 +198,7 @@ public class CourseController {
 			mav.addObject("rows", courses);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -213,6 +222,7 @@ public class CourseController {
 			courseService.deleteCourses(courses);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -227,6 +237,7 @@ public class CourseController {
 			courseService.deleteCourse(course);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -278,6 +289,7 @@ public class CourseController {
 			courseService.updateCourse(course);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

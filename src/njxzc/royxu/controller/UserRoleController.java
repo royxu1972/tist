@@ -6,6 +6,8 @@ import njxzc.royxu.domain.UserRole;
 import njxzc.royxu.searchmodel.DataGridModel;
 import njxzc.royxu.service.UserRoleServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +18,8 @@ import com.core.Page;
 
 @Controller
 public class UserRoleController {
+	private static final Logger LOG = LoggerFactory.getLogger(UserRoleController.class);
+	
 	@Autowired
 	UserRoleServiceImpl userRoleService;
 	
@@ -26,6 +30,7 @@ public class UserRoleController {
 			userRoleService.saveUserRole(user_role);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -43,6 +48,7 @@ public class UserRoleController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -56,6 +62,7 @@ public class UserRoleController {
 			userRoleService.deleteUserRole(user_role);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -69,6 +76,7 @@ public class UserRoleController {
 			userRoleService.updateUserRole(user_role);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

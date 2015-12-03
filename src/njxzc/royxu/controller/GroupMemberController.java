@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.core.Page;
-import njxzc.royxu.searchmodel.DataGridModel;
 
+import njxzc.royxu.searchmodel.DataGridModel;
 import njxzc.royxu.domain.GroupMember;
 import njxzc.royxu.service.GroupMemberServiceImpl;
 
@@ -24,6 +26,7 @@ import njxzc.royxu.service.GroupMemberServiceImpl;
  */
 @Controller
 public class GroupMemberController {
+	private static final Logger LOG = LoggerFactory.getLogger(GroupMemberController.class);
 	
 	@Autowired
 	private GroupMemberServiceImpl groupMemberService;
@@ -36,6 +39,7 @@ public class GroupMemberController {
 			groupMemberService.saveGroupMember(groupMember);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -54,6 +58,7 @@ public class GroupMemberController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -69,6 +74,7 @@ public class GroupMemberController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -85,6 +91,7 @@ public class GroupMemberController {
 			mav.addObject("rows", groupMembers);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -101,6 +108,7 @@ public class GroupMemberController {
 			mav.addObject("rows", groupMembers);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -123,6 +131,7 @@ public class GroupMemberController {
 //			groupMemberService.deleteGroupMembers(groupMembers);
 //			mav.addObject("success",true);
 //		}catch(Exception e){
+//			LOG.error(e.getMessage(), e);
 //			mav.addObject("success", false);
 //			mav.addObject("msg", e.getMessage());
 //		}
@@ -137,6 +146,7 @@ public class GroupMemberController {
 			groupMemberService.deleteGroupMember(groupMember);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -151,6 +161,7 @@ public class GroupMemberController {
 			groupMemberService.updateGroupMember(groupMember);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}

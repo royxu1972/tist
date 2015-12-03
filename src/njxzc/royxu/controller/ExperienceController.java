@@ -10,6 +10,8 @@ import njxzc.royxu.searchmodel.DataGridModel;
 import njxzc.royxu.searchmodel.SearchExperience;
 import njxzc.royxu.service.ExperienceServiceImpl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +27,7 @@ import com.core.Page;
  */
 @Controller
 public class ExperienceController {
+	private static final Logger LOG = LoggerFactory.getLogger(ExperienceController.class);
 	
 	@Autowired
 	private ExperienceServiceImpl experienceService;
@@ -38,6 +41,7 @@ public class ExperienceController {
 			experienceService.saveExperience(experience);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -56,6 +60,7 @@ public class ExperienceController {
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -83,6 +88,7 @@ public class ExperienceController {
 			}
 			
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -99,6 +105,7 @@ public class ExperienceController {
 			mav.addObject("rows", experiences);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -115,6 +122,7 @@ public class ExperienceController {
 			mav.addObject("rows", experiences);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -137,6 +145,7 @@ public class ExperienceController {
 			experienceService.deleteExperiences(experiences);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -151,6 +160,7 @@ public class ExperienceController {
 			experienceService.deleteExperience(experience);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
@@ -165,6 +175,7 @@ public class ExperienceController {
 			experienceService.updateExperience(experience);
 			mav.addObject("success",true);
 		}catch(Exception e){
+			LOG.error(e.getMessage(), e);
 			mav.addObject("success", false);
 			mav.addObject("msg", e.getMessage());
 		}
