@@ -1,0 +1,334 @@
+#Hat
+{
+	border-bottom: #e2e2e2 1px solid;
+}
+.align
+{
+	vertical-align: top;
+}
+
+/*基本信息*/
+body
+{
+	font: 12px Tahoma;
+	text-align: center; /*background:#FFFFFF;*/
+}
+
+/*页面层容器*/
+#container
+{
+	width: 100%;
+}
+h1, h2, h3, h4
+{
+	margin: 0;
+}
+
+h2, h3, h4
+{
+	margin-bottom: 20px;
+	padding-bottom: 9px;
+	border-bottom: 1px solid #F2F2F2;
+	letter-spacing: -0.035em;
+	font-weight: normal;
+	color: #37404C;
+}
+
+h2
+{
+	font-size: 28px;
+}
+
+h3
+{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+h4
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+
+p, ul, ol
+{
+	margin-bottom: 1.5em;
+	line-height: 170%;
+	text-align: justify;
+}
+
+ul, li
+{
+	list-style-type: none;
+	padding: 0 10 px;
+}
+
+/*顶部菜单*Wrapper*/
+#wrapper
+{
+	height: 140px;
+	width: 960px;
+	margin: 0 auto;
+	background-image: url(../gif/top.jpg);
+}
+
+/* Logo */
+
+#logo
+{
+	float: left;
+}
+
+#logo h1
+{
+	margin: 0;
+	padding: 40px 0 0 20px;
+	text-transform: lowercase;
+	letter-spacing: -3px;
+	font-size: 40px;
+	color: #FFFFFF;
+}
+
+#logo h1 a
+{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/* Menu */
+
+#menu
+{
+	height: 30px;
+	float: right;
+	margin: 0 auto;
+	position: relative;
+}
+#menu ul
+{
+	bottom: 0;
+	height: 5px;
+	padding: 92px 60px 0 0;
+}
+
+#menu li
+{
+	height: 10px;
+	width: 70px;
+	float: left;
+	text-align: center;
+	font-size: 12px;
+}
+
+#menu li a
+{
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+#menu li a:hover
+{
+	color: #b17a04;
+}
+#menu li a:visited
+{
+	color: Navy;
+}
+
+/*
+页面主体*/
+#PageBody
+{
+	padding-top: 3px;
+	width: 958px; /*设定宽度*/
+	margin: 0 auto 0; /*居中*/
+	height: 777px;
+	text-align: left; /*文字左对齐*/
+	border: 1px solid #008acc;
+}
+#Sidebar
+{
+	width: 21%;
+	height: 777px;
+	float: left; /*  浮动居左*/
+	clear: left; /* 不允许左侧存在浮动*/
+	overflow: scroll;
+	border-right: 1px solid #008acc;
+}
+#MainBody
+{
+	margin: 0 auto;
+	width: 79%;
+	height: 777px; /*text-align: left;*/
+	float: right; /*浮动居右*/
+	clear: right; /*不允许右侧存在浮动  */
+}
+#GV
+{
+	height: 700px;
+	width: auto;
+	overflow: auto;
+}
+/*题目位置提示*/
+.lb
+{
+	padding-left: 15px;
+	text-align: left;
+	background-image: url(../Img/lbg.gif);
+	background-repeat: repeat-x;
+	color: Blue;
+}
+/*树形目录节点鼠标样式*/
+.TreeNode
+{
+	cursor: hand;
+}
+.Center
+{
+	margin-left: 320px; *margin-left:0px;
+}
+/*页面底部*/
+#Footer
+{
+	width: 100%;
+	margin: auto; /*background:#00FFFF*/
+}
+/*下拉菜单的样式*/
+.Dropdown
+{
+	background-color: #33ccff;
+}
+
+/*按钮样式*/
+.Btn
+{
+	border-style: none;
+	display: inline;
+	background: none url(   '../Img/Item/Btn.gif' ) no-repeat center center;
+	font-size: small;
+	height: 25px;
+	width: 70px;
+	cursor: hand;
+}
+.HintDiv
+{
+	padding: 100 0 10 0;
+	width: 960px;
+	height: 15px;
+	border: solid 1px #FF9900;
+	background-color: #FFFFCC;
+	text-align: center;
+	vertical-align: middle;
+	font-family: 宋体, Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #0033CC;
+}
+.cc
+{
+	background-color: #DFF0EA;
+}
+
+.ToolTip_
+{
+
+	position: absolute;
+	text-align: left;
+	z-index: 8888;
+	color: #003366;
+	visibility: hidden;
+	padding: 10px 1px 1px 12px;width: 235px;
+	/*font: 12px Arial,Helvetica,sans-serif;	height: 129px;
+	
+	background: Transparent url(  "../Img/Item/TipBg2.gif" ) no-repeat center center;*/
+}
+
+.align
+{
+	vertical-align: top;
+}
+.Top
+{
+	vertical-align: top;
+}
+
+.NoChecked
+{
+	text-align: left;
+	padding: 8px 5px 4px 25px;
+	background: url(  '../Img/Item/GQ.gif' ) no-repeat 1% 4px;
+}
+.Checked
+{
+	text-align: left;
+	padding: 8px 5px 4px 25px;
+	background: url(    '../Img/Item/GT.gif' ) no-repeat 1% 4px;
+}
+.Shared
+{
+	text-align: left;
+	padding: 8px 5px 4px 25px;
+	/*/background: url( '../Img/Item/RT.gif' ) no-repeat 1% 4px; /*/
+}
+
+
+*{margin:0;padding:0;font-size:12px;}
+.wrapper{width:80%;margin:0 auto;}
+/*通用样式--容器宽度值width:30%;*/
+.sharp{margin:20px auto 10px 10px;float:left;margin-right:2%;}
+.sharp .content div{padding:10px;text-indent:2em;}
+.content{padding-left:10px; padding-top:3px; padding-bottom:3px;}
+/*上圆角框通用设置样式，如果要运用多个不同颜色，以下6句不用重新变化--------------------------------*/
+.b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8{height:1px; font-size:1px; overflow:hidden; display:block;}
+.b1,.b8{margin:0 5px;}
+.b2,.b7{margin:0 3px;border-right:2px solid; border-left:2px solid;}
+.b3,.b6{margin:0 2px;border-right:1px solid; border-left:1px solid;}
+.b4,.b5{margin:0 1px;border-right:1px solid; border-left:1px solid; height:2px;}
+.content {border-right:1px solid;border-left:1px solid;overflow:hidden; padding:10px auto 10px 100px;}
+/*颜色方案一,蓝色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{border-color:#96C2F1;}
+.color1 .b1,.color1 .b8{background:#96C2F1;}
+/*背景色*/
+.color1 .b2,.color1 .b3,.color1 .b4,.color1 .b5,.color1 .b6,.color1 .b7,.color1 .content{background:#EFF7FF;}
+ 
+/*颜色方案二,绿色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color2 .b2,.color2 .b3,.color2 .b4,.color2 .b5,.color2 .b6,.color2 .b7,.color2 .content{border-color:#9BDF70;}
+.color2 .b1,.color2 .b8{background:#9BDF70;}
+/*背景色*/
+.color2 .b2,.color2 .b3,.color2 .b4,.color2 .b5,.color2 .b6,.color2 .b7,.color2 .content{background:#F0FBEB;}
+ 
+/*颜色方案三,绿色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color3 .b2,.color3 .b3,.color3 .b4,.color3 .b5,.color3 .b6,.color3 .b7,.color3 .content{border-color:#BBE1F1;}
+.color3 .b1,.color3 .b8{background:#BBE1F1;}
+/*背景色*/
+.color3 .b2,.color3 .b3,.color3 .b4,.color3 .b5,.color3 .b6,.color3 .b7,.color3 .content{background:#EEFAFF;}
+ 
+/*颜色方案四,绿色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color4 .b2,.color4 .b3,.color4 .b4,.color4 .b5,.color4 .b6,.color4 .b7,.color4 .content{border-color:#E3E197;}
+.color4 .b1,.color4 .b8{background:#E3E197;}
+/*背景色*/
+.color4 .b2,.color4 .b3,.color4 .b4,.color4 .b5,.color4 .b6,.color4 .b7,.color4 .content{background:#FFFFDD;}
+ 
+/*颜色方案五,粉色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color5 .b2,.color5 .b3,.color5 .b4,.color5 .b5,.color5 .b6,.color5 .b7,.color5 .content{border-color:#F8B3D0;}
+.color5 .b1,.color5 .b8{background:#F8B3D0;}
+/*背景色*/
+.color5 .b2,.color5 .b3,.color5 .b4,.color5 .b5,.color5 .b6,.color5 .b7,.color5 .content{background:#FFF5FA;}
+ 
+/*颜色方案六,黄色边框----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.color6 .b2,.color6 .b3,.color6 .b4,.color6 .b5,.color6 .b6,.color6 .b7,.color6 .content{border-color:#FFCC00;}
+.color6 .b1,.color6 .b8{background:#FFCC00;}
+/*背景色*/
+.color6 .b2,.color6 .b3,.color6 .b4,.color6 .b5,.color6 .b6,.color6 .b7,.color6 .content{background:#FFFFF7;}

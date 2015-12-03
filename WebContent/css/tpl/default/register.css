@@ -1,0 +1,230 @@
+.ui-cnt-register {
+	height: 550px;
+}
+
+.ui-cnt-register .regTip {
+	color: #999999;
+	display: none;
+	float: left;
+	line-height: 40px;
+	width: 230px;
+}
+
+.ui-cnt-register .regFalse {
+	background-image: url("/images/register/ico.png");
+	background-position: 0 -108px;
+	background-repeat: no-repeat;
+	color: #FF0000;
+	display: block;
+	float: left;
+	line-height: 40px;
+	padding-left: 20px;
+	width: 230px;
+}
+
+.ui-cnt-register .regTrue {
+	background-image: url("/images/register/ico.png");
+	background-position: 0 -145px;
+	background-repeat: no-repeat;
+	color: #009900;
+	display: block;
+	float: left;
+	line-height: 40px;
+	padding-left: 20px;
+	width: 230px;
+}
+
+.ui-cnt-register select {
+	font-size: 12px;
+	line-height: 16px
+}
+
+.ui-cnt-register img {
+	border: 0;
+}
+
+.ui-cnt-register ul,li {
+	list-style-type: none
+}
+
+.ui-cnt-register a {
+	text-decoration: none;
+	color: #039;
+}
+
+.ui-cnt-register a:hover {
+	text-decoration: underline;
+}
+
+.ui-cnt-register .ipt {
+	border: 2px solid #CBE3F3;
+	background-color: #FFFFFF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	padding: 5px 3px
+}
+
+.ui-cnt-register .reg {
+	clear: left;
+	width: 900px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 25px;
+	margin-left: auto;
+	position: relative;
+	height: 450px;
+}
+
+.ui-cnt-register .step li {
+	font-family: Microsoft YaHei;
+	font-size: 18px;
+	text-align: center;
+	display: block;
+	line-height: 47px;
+	float: left;
+	height: 47px;
+	width: 114px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.ui-cnt-register .this {
+	background-image: url(/images/register/step.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	color: #003399;
+}
+
+.ui-cnt-register .normal {
+	background-image: url(/images/register/step.png);
+	background-repeat: no-repeat;
+	background-position: -124px 0px;
+}
+
+.ui-cnt-register .rcon {
+	background-color: #FFFFFF;
+	border: 3px solid #CBE3F3;
+	position: absolute;
+	width: 860px;
+	top: 44px;
+	z-index: 0;
+	padding: 15px;
+	height: 450px;
+}
+
+.ui-cnt-register .inf {
+	padding: 10px;
+	float: left;
+	width: 600px;
+}
+
+.ui-cnt-register .inf li {
+	display: block;
+	height: 40px;
+	clear: left;
+}
+
+.ui-cnt-register .inf b,.ui-cnt-register .inf strong {
+	font-size: 14px;
+	font-weight: normal;
+	display: block;
+	float: left;
+	width: 100px;
+	text-align: right;
+	line-height: 40px;
+}
+
+.ui-cnt-register .inf em {
+	font-style: normal;
+	display: block;
+	float: left;
+	width: 240px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.ui-cnt-register  .other {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #CBE3F3;
+	line-height: 40px;
+	margin-top: 10px;
+	clear: left;
+}
+
+.regbut {
+	background: url(/images/register/reg_buton.png) no-repeat 0px 0px;
+	display: block;
+	height: 40px;
+	width: 110px;
+	font-family: Microsoft YaHei;
+	font-size: 18px;
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	border: 0px;
+	cursor: pointer;
+}
+
+.ui-cnt-register .sidebar {
+	float: right;
+	width: 208px;
+	height: 380px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CBE3F3;
+	padding-left: 10px;
+}
+
+.ui-cnt-register  .sidebar p {
+	font-weight: normal;
+}
+
+.ui-cnt-register .sedmail {
+	clear: left;
+	display: block;
+	line-height: 30px;
+	margin-top: 50px;
+	overflow: visible;
+	text-align: center;
+}
+.ui-cnt-register .sedmail h2 {
+    font-family: Microsoft YaHei;
+    font-size: 24px;
+    line-height: 40px;
+    color: #000;
+}
+
+.ui-cnt-register .sedmail p {
+	font-weight: normal;
+    line-height: 40px;
+}
+
+.ui-cnt-register .sedmail p a {
+    text-decoration: none;
+}
+.ui-cnt-register .regmail {
+    background: url("/images/register/reg_buton.png") no-repeat scroll 0 -53px transparent;
+    border: 0 none;
+    color: #FFFFFF;
+    display: block;
+    font-family: Microsoft YaHei;
+    font-size: 18px;
+    font-weight: bold;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 140px;
+}
+.ui-cnt-register .regmail a {
+    color: #003399;
+    text-decoration: none;
+}
+.ui-change-code{
+	cursor: pointer;
+}
+.ui-rule-attention{
+	font-size:12px;
+	line-height:20px;
+}

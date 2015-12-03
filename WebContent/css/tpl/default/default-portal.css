@@ -1,0 +1,550 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 1024px;
+	margin: auto;
+}
+
+p {
+	　　text-align: left;
+	font-weight: bold;
+	　　
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+.ui {
+	width: 1024px;
+	overflow: auto;
+	background: #EAEEF2;
+}
+/*
+* @name: 工具栏
+* @overview: 一般工具栏
+* @require: null
+*/
+.ui-head {
+	background: #000;
+	height: 30px;
+	padding-right: 20px;
+	padding-top: 2px;
+	width: 1004px;
+}
+
+.ui-head-toolbar li {
+	float: right;
+	color: #fff;
+	margin: 4px 5px;
+	list-style-type: none;
+	font-size: 13px;
+}
+
+.ui-head-toolbar a {
+	color: #fff;
+	text-decoration: none;
+}
+/*
+* @name: 导航
+* @overview: 一般导航
+* @require: null
+*/
+/*主页导航样式*/
+.ui-nav {
+	background: url(/images/index/list3.png) repeat-x left top;
+	height: 69px;
+	width: 1024px;
+}
+
+.ui-nav-logo {
+	width: 200px;
+	float: left;
+	margin-left: 20px;
+}
+
+.ui-nav-index1 {
+	height: 90px;
+}
+
+.ui-nav-index {
+	background: url(/images/index/index_top.png) repeat-x left top;
+	width: 994px;
+	height: 35px;
+	float: left;
+	padding-left: 30px;
+	font-weight: bold;
+}
+
+.ui-nav-index ul li a {
+	color: #474747;
+}
+
+.ui-nav-index ul li a:hover {
+	color: #fff;
+}
+
+.ui-nav-index ul li {
+	float: left;
+	height: 31px;
+	margin: 1px 10px;
+	padding: 6px 10px;
+}
+
+.ui-nav-index ul li:hover {
+	float: left;
+	background: url(/images/index/index_nav.png) repeat-x left top;
+	height: 31px;
+	margin: 1px 10px;
+	padding: 6px 10px;
+}
+/*
+* @name: 搜索
+* @overview: 一般搜索
+* @require: null
+*/
+/*主页搜索框的样式*/
+.ui-nav-index_search {
+	float: left;
+	margin-top: 10px;
+	width: 345px;
+}
+
+.ui-nav-index_search .ui-nav-search-text {
+	width: 280px;
+	height: 22px;
+	float: left;
+}
+
+.ui-nav-index_search ul li {
+	float: left;
+	widt: auto;
+	font-size: 12px;
+	margin: 0 5px;
+}
+
+.ui-nav-index_search ul li a {
+	color: #fff;
+	background: none;
+}
+
+.ui-nav-advanced {
+	width: 450px;
+}
+
+.ui-nav-advanced a img {
+	border: none;
+}
+
+.ui-nav-advanced input {
+	color: gray;
+}
+
+.ui-nav-search-submit {
+	background: url(/images/index/search.png) no-repeat left top;
+	height: 25px;
+	width: 51px;
+	border: none;
+	float: left;
+}
+
+.ui-nav-upload a img {
+	border: none;
+	margin-top: 10px;
+}
+
+/*主页搜索框的样式end*/
+/*
+* @name: 主体内容
+* @overview: 一般主体内容
+* @require: null
+*/
+/*主页新闻信息样式*/
+.ui-cnt-index {
+	padding-top: 10px;
+}
+
+.ui-cnt-indexnews {
+	float: left;
+	background: #fff;
+	width: 275px;
+	border: 2px solid #D5D9DC;
+	height: 375px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+.ui-cnt-indexnews p{
+	background: url("/images/index/top.png") repeat-x scroll left top transparent;
+    font-size: 14px;
+    height: 30px;
+    padding: 8px 20px;
+}
+.ui-cnt-indexnews ul {
+	padding-left: 10px;
+}
+
+.ui-cnt-indexnews ul li {
+	width: 260px;
+	float: left;
+}
+
+.ui-cnt-indexnews ul li a {
+	font-size: 13px;
+	line-height: 210%;
+	color: #000;
+}
+
+.ui-cnt-indexnews ul li a:hover {
+	color: red;
+}
+/*主页最新推荐的样式*/
+.ui-cnt-indexreco {
+	float: left;
+	background: #fff;
+	border: 2px solid #D5D9DC;
+	width: 450px;
+	margin-left: 8px;
+	height: 375px;
+}
+
+.ui-cnt-indexreco p {
+	background: url(/images/index/top.png) repeat-x left top;
+	height: 34px;
+	padding: 8px 20px;
+	font-size: 14px;
+}
+
+.ui-cnt-indexreco-title {
+	font-size: 16px;
+	color: #387CD8;
+}
+
+.ui-cnt-indexreco span {
+	display: block;
+	padding: 5px 10px;
+}
+
+.ui-cnt-indexreco ul {
+	padding-left: 10px;
+}
+
+.ui-cnt-indexreco ul li {
+	width: 220px;
+	float: left;
+	line-height: 210%;
+}
+
+.ui-cnt-indexreco ul li a {
+	font-size: 12px;
+	color: #000;
+}
+
+.ui-cnt-indexreco ul li a:hover {
+	color: red;
+}
+/*主页最新上传的样式*/
+.ui-cnt-indexlastup {
+	float: left;
+	background: #fff;
+	border: 2px solid #D5D9DC;
+	width: 245px;
+	margin-left: 8px;
+	height: 375px;
+}
+
+.ui-cnt-indexlastup p {
+	background: url(/images/index/top.png) repeat-x left top;
+	height: 34px;
+	padding: 8px 20px;
+	font-size: 14px;
+}
+
+.ui-cnt-indexlastup ul {
+	padding-left: 5px;
+}
+
+.ui-cnt-indexlastup ul li {
+	line-height: 180%;
+}
+
+.ui-cnt-indexlastup ul li a {
+	font-size: 13px;
+	color: #000;
+}
+
+.ui-cnt-indexlastup ul li a:hover {
+	color: red;
+}
+/*主页精品推荐的样式*/
+.ui-cnt-indexboutique {
+	background: #fff;
+	width: 1000px;
+	float: left;
+	margin-top: 10px;
+	border: 2px solid #D5D9DC;
+	margin-left: 10px;
+	padding-bottom:10px;
+}
+
+.ui-cnt-indexboutique p {
+	background: url(/images/index/top.png) repeat-x left top;
+	height: 34px;
+	padding: 8px 20px;
+	font-size: 14px;
+}
+
+.ui-cnt-indexboutique a img {
+	float: right;
+	border: none;
+}
+
+.ui-cnt-indexboutique ul li {
+	width: 230px;
+	float: left;
+	font-size: 14px;
+	line-height: 210%;
+	padding-left: 20px;
+}
+
+.ui-cnt-indexboutique ul li a {
+	color: #000;
+}
+
+.ui-cnt-indexboutique ul li a:hover {
+	color: red;
+}
+/*主页按分类检索的样式*/
+.ui-cnt-indexcatesear {
+	background: #fff;
+	width: 1000px;
+	float: left;
+	margin-top: 10px;
+	border: 2px solid #D5D9DC;
+	padding-bottom: 10px;
+	margin-left: 10px;
+}
+
+.ui-cnt-indexcatesear p {
+	background: url(/images/index/top.png) repeat-x left top;
+	height: 34px;
+	padding: 8px 20px;
+	font-size: 14px;
+}
+
+.ui-cnt-indexcatesear ul li a {
+	color: #000;
+	font-size: 13px;
+	padding: 5px;
+	line-height: 210%;
+}
+
+.ui-cnt-indexcatesear ul li a:hover {
+	background: #70CCF5;
+}
+
+.ui-cnt-indexcatesear ul {
+	padding-left: 10px;
+}
+
+.ui-cnt-indexcatesear li .ui-cnt-indexcatesear-one {
+	color: #3882CA;
+	font-weight: bold;
+}
+/*主页名校展示页面的样式*/
+.ui-cnt-indexschool {
+	background: #fff;
+	width: 1000px;
+	float: left;
+	margin-top: 10px;
+	border: 2px solid #D5D9DC;
+	padding-bottom: 10px;
+	margin-left: 10px;
+}
+
+.ui-cnt-indexschool p {
+	background: url(/images/index/top.png) repeat-x left top;
+	height: 34px;
+	padding: 8px 20px;
+	font-size: 14px;
+}
+
+.ui-cnt-indexschool p span {
+	colro: #000;
+	font-size: 12px;
+	font-family: "宋体";
+	padding-left: 20px;
+	font-weight: normal;
+}
+
+.ui-cnt-indexschool p img {
+	float: right;
+}
+/*主页名校展示图片展示的样式*/
+h1,h2 {
+	color: #ccc;
+	clear: both
+}
+
+.ui-cnt-indexschool-img {
+	width: 1000px;
+}
+
+#scroll {
+	width: 910px;
+	height: 130px;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	float: left;
+}
+
+#scroll li {
+	float: left
+}
+
+.ui-cnt-indexschool-mqdemoa li a span {
+	color: #000;
+}
+/*块2样式*/
+.ui-cnt-indexschool-mqdemoa {
+	width: 5460px !important;
+	width: 2730px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+/*块2子元素样式*/
+.ui-cnt-indexschool-mqdemoa li {
+	width: 185px;
+	float: left;
+	text-align: center
+}
+
+.ui-cnt-indexschool-mqdemoa li a {
+	color: #fff;
+	text-decoration: none;
+	line-height: 22px;
+	font-size: 12px;
+}
+
+.ui-cnt-indexschool-mqdemoa li a img {
+	border: none;
+}
+/*内容样式*/
+.ui-cnt-indexschool-mqdemoa li p {
+	margin: 0;
+}
+
+.ui-cnt-indexschool-mqdemoa li p img {
+	width: 170px;
+	height: 110px;
+}
+
+.ui-cnt-indexschool-mqdemoa li h3 {
+	margin: 0;
+	font: 12px/27px "宋体";
+	text-align: center;
+}
+/*scroll对象部分样式结束*/
+
+/*其他样式，与scroll对象无关联*/
+.pre {
+	width: 10px;
+	height: 20px;
+	margin: 20px 10px 0 0;
+	padding: 10px;
+	background: url(/images/index/prev.png) no-repeat left top;
+	cursor: pointer;
+	float: left
+}
+
+.next {
+	width: 10px;
+	height: 20px;
+	margin: 20px 0 0 10px;
+	padding: 10px;
+	background: url(/images/index/next.png) no-repeat left top;
+	cursor: pointer;
+	float: left
+}
+/*---------------主页名校展示图片展示的样式end----------------*/
+/*---------------主页名校展示校名展示的样式----------------*/
+.ui-cnt-indexschool-name {
+	padding: 10px 20px;
+	border-top: 1px dashed #000;
+	float: left;
+	width: 950px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.ui-cnt-indexschool-name ul li {
+	float: left;
+	width: 220px;
+	line-height: 200%;
+	padding-left: 10px;
+}
+
+.ui-cnt-indexschool-name ul li a {
+	font-size: 13px;
+	color: #000;
+}
+
+.ui-cnt-indexschool-name ul li a:hover {
+	color: #FF0000;
+}
+/*---------------主页名校展示校名展示的样式end----------------*/
+
+/*---------------主页合作链接展示的样式----------------*/
+.ui-cnt-indexlink {
+	width: 1000px;
+	background: #fff;
+	float: left;
+	border: 2px solid #D5D9DC;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.ui-cnt-indexlink p {
+	background: url(/images/index/top.png) repeat-x left top;
+	height: 34px;
+	padding: 8px 20px;
+	font-size: 14px;
+}
+
+.ui-cnt-indexlink ul li {
+	width: 100px;
+	float: left;
+	margin: 10px 5px 20px 5px;
+}
+
+.ui-cnt-indexlink ul li img {
+	border: none;
+}
+/*---------------主页合作链接展示的样式end----------------*/
+/*
+* @name: 版权信息
+* @overview: 一般版权信息
+* @require: null;
+*/
+.ui-copyright {
+	width: 1000px;
+	height: 50px;
+	border: 2px solid #D5D9DC;
+	float: left;
+	background: #fff;
+	padding: 20px 10px;
+	margin-top: 10px;
+}
+
+.ui-copyright span {
+	font-size: 12px;
+}

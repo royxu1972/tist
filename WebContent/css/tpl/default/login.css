@@ -1,0 +1,219 @@
+/*
+* @name: 登录界面
+* @overview: 一般登录
+* @require: null
+*/
+
+#ui-userlogin_body {
+	padding: 0;
+	background: url(/images/login/user_all_bg.gif) #226cc5 repeat-x
+		50% top;
+	margin: 110px 0px 0px;
+	font: 12px/150% Arial, "宋体", Helvetica, sans-serif;
+	text-decoration: none
+}
+
+#ui-user_login {
+	padding: 0;
+	margin: 0 auto;
+	width: 590px;
+}
+
+#ui-user_top {
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+#ui-user_top ul {
+	padding: 0;
+	margin: 0;
+}
+
+#ui-user_top li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	list-style-type: none
+}
+
+.ui-user_top_l {
+	background: url(/images/login/user_top_l.gif) no-repeat 50% top;
+	float: left;
+	width: 129px;
+	height: 116px
+}
+
+.ui-user_top_c {
+	background: url(/images/login/user_top_c.gif) no-repeat 50% top;
+	float: left;
+	width: 280px;
+	height: 116px;
+}
+.ui-user_top_c h1{
+	padding-top:25px;
+	font-size:24px;
+	color:#226dc7;
+	font-family:"黑体";
+	line-height:120%;
+	}
+
+
+.ui-user_top_r {
+	background: url(/images/login/user_top_r.gif) no-repeat 50% top;
+	float: left;
+	width: 180px;
+	height: 116px;
+}
+
+#ui-user_main {
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+#ui-user_main ul {
+	padding: 0;
+	margin: 0;
+}
+
+#ui-user_main li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	list-style-type: none;
+}
+
+.ui-user_main_l {
+	background: url(/images/login/user_main_l.gif) #bec5cc no-repeat
+		50% top;
+	float: left;
+	width: 129px;
+	height: 139px
+}
+
+.ui-user_main_c {
+	background: url(/images/login/user_main_c.gif) #bec5cc no-repeat
+		50% top;
+	width: 280px;
+	float: left;
+	height: 139px;
+}
+
+.ui-user_main_r {
+	background: url(/images/login/user_main_r.gif) #bec5cc no-repeat
+		50% top;
+	float: left;
+	width: 180px;
+	height: 139px;
+	line-height: 139px;
+}
+
+.ui-user_main_box {
+	padding: 0;
+	margin: 0;
+}
+
+.ui-user_main_box ul {
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+.ui-user_main_box li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	list-style-type: none;
+}
+
+.ui-user_main_box .ui-user_main_text {
+	line-height: 34px;
+	height: 34px;
+	width: 60px;
+	COLOR: #000;
+}
+
+.ui-user_main_box .ui-user_main_input {
+	line-height: 34px;
+	height: 34px
+}
+
+.ui-TxtUserNameCssClass {
+	border-top-width: 0px;
+	padding-left: 25px;
+	border-left-width: 0px;
+	background: url(/images/login/user_login_name.gif) no-repeat;
+	border-bottom-width: 0px;
+	width: 165px;
+	line-height: 20px;
+	height: 21px;
+	border-right-width: 0px
+}
+
+.ui-TxtPasswordCssClass {
+	border-top-width: 0px;
+	padding-left: 25px;
+	border-left-width: 0px;
+	background: url(/images/login/user_login_password.gif) no-repeat;
+	border-bottom-width: 0px;
+	width: 165px;
+	line-height: 20px;
+	height: 21px;
+	border-right-width: 0px
+}
+
+.ui-IbtnEnterCssClass {
+	width: 111px;
+	height: 122px;
+	border-top-width: 0px;
+	border-left-width: 0px; 
+	border-bottom-width: 0px; 
+	border-right-width: 0px
+}
+
+#ui-user_bottom {
+	padding: 0;
+	margin: 0;
+	clear: both;
+}
+
+#ui-user_bottom ul {
+	padding: 0;
+	margin: 0;
+}
+
+#ui-user_bottom li {
+	padding: 0;
+	margin: 0;
+	float: left;
+	list-style-type: none;
+}
+
+.ui-user_bottom_l {
+	background: url(/images/login/user_bottom_l.gif) no-repeat 50%
+		top;
+	float: left;
+	width: 129px;
+	height: 117px;
+}
+
+.ui-user_bottom_c {
+	background: url(/images/login/user_bottom_c.gif) no-repeat 50%
+		top;
+	COLOR: #fff;
+	line-height: 117px;
+	padding-top: 20px;
+	text-align: right;
+	float: left;
+	width: 280px;
+	height: 117px;
+}
+
+.ui-user_bottom_r {
+	background: url(/images/login/user_bottom_r.gif) no-repeat 50%
+		top;
+	float: left;
+	width: 180px;
+	height: 117px;
+}

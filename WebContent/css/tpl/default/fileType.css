@@ -1,0 +1,88 @@
+.ui-filetype-icon {
+	background: url(/images/default/icons.gif) no-repeat scroll -1000px
+		-1000px transparent;
+	cursor: default;
+	display: -moz-inline-stack;
+display: inline-block;
+padding: 0;
+vertical-align: -2px;
+font-size: 0;
+line-height: 9999em;
+overflow: hidden;
+position: relative;
+width: 17px;
+height: 17px;
+top:-1px;
+}
+
+.ui-filetype-doc,.ui-filetype-docx {
+	background-position: -72px 1px;
+}
+
+.ui-filetype-xls,.ui-filetype-xlsx {
+	background-position: -105px 1px;
+}
+
+.ui-filetype-ppt,.ui-filetype-pptx {
+	background-position: -139px 1px;
+}
+
+.ui-filetype-ui-filetype,.ui-filetype-ui-filetypex {
+	background-position: -72px 1px;
+}
+
+.ui-filetype-txt {
+	background-position: -36px 1px;
+}
+
+.ui-filetype-pdf {
+	background-position: 0 1px;
+}
+
+.ui-filetype-vsd {
+	background-position: -173px 1px;
+}
+
+.ui-filetype-rtf {
+	background-position: -140px -27px;
+}
+
+.ui-filetype-pot {
+	background-position: -209px -27px;
+}
+
+.ui-filetype-pps {
+	background-position: -209px 1px;
+}
+
+.ui-filetype-wps {
+	background-position: -106px -26px;
+}
+
+.ui-filetype-et {
+	background-position: -73px -26px;
+}
+
+.ui-filetype-dps {
+	background-position: -174px -27px;
+}
+
+.ui-filetype-epub {
+	background-position: -42px -142px;
+}
+
+.ui-filetype-wmv {
+	background: url(/images/default/asf.gif) no-repeat scroll;
+}
+
+.ui-filetype-swf {
+	background: url(/images/default/asf.gif) no-repeat scroll;
+}
+
+.ui-filetype-asf {
+	background: url(/images/default/asf.gif) no-repeat scroll;
+}
+
+.ui-filetype-avi {
+	background: url(/images/default/asf.gif) no-repeat scroll;
+}

@@ -1,0 +1,101 @@
+/*
+* @name: 管理界面布局
+* @overview: 后台界面布局
+* @require: null
+* @creator: 刘一峰
+* @date:2012-8-8 
+*/
+.ui-layout{	
+}
+
+/**north**/
+
+.ui-layout-north{ 
+	color: #2d5593; 
+	height: 75px;
+	background:#E0ECFF url("/images/themes/default/head_bg.gif") repeat-x;
+	overflow:hidden;
+}
+
+.ui-layout-north-title{ 
+	float:left;
+	width: 750px;
+	height:72px;
+	background:url("/images/themes/default/head_bg_l.gif") no-repeat;
+}
+
+.ui-layout-north-title h4{
+	float:left;
+	margin:0 0 0 20px;
+	width:450px;
+	height:72px;
+	background:url("/images/logo/48.png") no-repeat left;
+	display:block;
+}
+
+.ui-layout-north-title h4 span{
+	float:left;
+	margin:23px 0 0 60px;
+	font-size: 20px; 
+	font-weight: bold; 
+	font-family:"微软雅黑","宋体";
+	color:white;
+	display:block;
+}
+
+
+.ui-layout-north-about{
+	float:right;
+	width:200px;
+	height:72px;
+}
+
+.ui-layout-north-about-user{
+	margin:20px 0 0 0;
+	width:200px;
+	height:40px;
+	color:white;	
+}
+
+.ui-layout-north-about-user-photo{
+	float:left;
+}
+
+.ui-layout-north-about-user-photo img{
+	width:36px;
+	height:36px;
+	border:1px solid #c0c0c0;
+}
+
+.ui-layout-north-about-user-userinfo{
+	float:left;
+	margin:10px 5px 0 5px;
+	
+}
+
+.ui-layout-north-about-user a{
+	float:left;
+	margin:10px 0 0 0;
+	padding:0 0 0 5px;
+	color:white;
+	
+	border-left: 1px dotted white;
+}
+
+
+/**West**/
+.ui-layout-west{
+	width:204px;
+}
+
+.ui-layout-south{
+	background: #fafafa; color: #2d5593; height: 30px;
+}
+
+.ui-layout-center{
+	
+}
+
+.ui-layout-east{
+	
+}

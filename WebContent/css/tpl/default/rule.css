@@ -1,0 +1,147 @@
+@CHARSET "UTF-8";
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal;
+	border:0px;
+}
+ body {
+	font-size: 12px;
+	color: #000;
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+
+}
+.ui-list-item-rule {
+	background-color:white;
+	border: 1px solid #DDDDDD;
+	
+	
+}
+
+.ui-list-item-rule h3 {
+	 color: #743E04;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    zoom:1;
+    border:0px;
+    
+}
+
+.ui-list-item-rule p {
+	border: 1px solid #DDDDDD;
+	font-size: 12px;
+	margin: 6px 0 6px 30px;
+	padding-left: 10px;
+	background: url(../../../images/upload/icons.gif)
+		no-repeat scroll -200px -121px;
+		border:0px;
+}
+
+.ui-list-item-rule table {
+	
+	margin:10px;
+
+	
+}
+
+.ui-list-item-rule td {
+	padding: 4px 0;
+}
+
+.ui-list-item-rule td.r {
+	text-align: right;
+	padding-right: 20px;
+	font-size: 12px;
+	float: none;
+}
+
+.ui-list-item-rule td .icon {
+	vertical-align: middle;
+}
+.icon {
+	background: url(../../../images/upload/icons.gif)
+		-1000px -1000px no-repeat;
+	padding: 2px 10px;
+	zoom: 1;
+	font-size: 12px;
+	cursor: default;
+	position: relative;
+	top: -1px;
+}
+
+.hot {
+	padding: 2px 10px;
+	background-position: -34px -30px;
+}
+
+.new {
+	padding: 2px 10px;
+	background-position: -2px -30px;
+}
+
+.newred {
+	padding: 1px 10px 0 10px;
+	background-position: -64px -139px;
+}
+
+.xls,.xlsx {
+	background-position: -105px 1px;
+}
+
+.ppt,.pptx {
+	background-position: -139px 1px;
+}
+
+.doc,.docx {
+	background-position: -72px 1px;
+}
+
+.txt {
+	background-position: -36px 1px;
+}
+
+.pdf {
+	background-position: 0 1px;
+}
+
+.vsd {
+	background-position: -173px 1px;
+}
+
+.rtf {
+	background-position: -140px -27px;
+}
+
+.pot {
+	background-position: -209px -27px;
+}
+
+.pps {
+	background-position: -209px 1px;
+}
+
+.wps {
+	background-position: -106px -26px;
+}
+
+.et {
+	background-position: -73px -26px;
+}
+
+.dps {
+	background-position: -174px -27px;
+}
+
+.epub {
+	background-position: -42px -142px;
+}
+
