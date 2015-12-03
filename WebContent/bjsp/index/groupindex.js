@@ -111,18 +111,29 @@ function loadPagedNotices(){
         async : false,
         success: function(result) {
         	if(result.success){
-        		$("#notices").empty();
+        		$("#ul_messages").empty();
         		if(result.rows.length>0){
             		$.each(result.rows,function(idx,item){
+//            			var html = 	"<li>" +
+//            							"<div>" +
+//	            							"<small>"+item.notice_time+"</small>" +
+//	            							"<h4>"+item.notice_title+"</h4>" +
+//	            							"<p>"+item.notice_content+"</p>" +
+//	            							"<a href='#'><i class='fa fa-trash-o'></i></a>" +
+//            							"</div>" +
+//            						"</li>";
             			var html = 	"<li>" +
-            							"<div>" +
-	            							"<small>"+item.notice_time+"</small>" +
-	            							"<h4>"+item.notice_title+"</h4>" +
-	            							"<p>"+item.notice_content+"</p>" +
-	            							"<a href='#'><i class='fa fa-trash-o'></i></a>" +
-            							"</div>" +
-            						"</li>";
-            			$("#notices").append(html);
+										"<div class='dropdown-messages-box'>" +
+											"<div class='media-body'>" +
+//												"<small class='pull-right'>"+item.notice_time+"</small>" +
+												"<p style='text-align: center;'><strong>"+item.notice_title+"</strong></p>" +
+												"<p style='text-indent:2em;'>"+item.notice_content+"</p>" +
+												"<small><b>"+item.notice_time+"</b></small>" +
+											"</div>" +
+										"</div>" +
+									"</li>" +
+									"<li class='divider'></li>";
+            			$("#ul_messages").append(html);
             		});
             	}else{
             		

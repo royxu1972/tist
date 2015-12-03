@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/groupindex.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/pinboard.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/contact.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/message.css" />
 <title>Group Information</title>
 </head>
 <body>
@@ -35,6 +36,28 @@
 	     </div><!--/.nav-collapse -->
 	   </div>
 	 </nav> --%>
+	 
+	<div id="div-static-topright">
+		<ul>
+			<li class="dropdown">
+				<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+					<i class="glyphicon glyphicon-bell"></i><span class="label label-warning">3</span>
+				</a>
+                 <ul class="dropdown-menu dropdown-messages" id="ul_messages">
+                     <li>
+                         <div class="dropdown-messages-box">
+                             <div class="media-body">
+                                 <small class="pull-right">46h ago</small>
+                                 <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                 <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                             </div>
+                         </div>
+                     </li>
+                     <li class="divider"></li>
+                 </ul>
+             </li>
+		</ul>
+	</div>
 
 	<div class="container-fluid" id="below-nav">
 		<div class="row-fluid" id="div_group_info">
@@ -136,7 +159,7 @@
 						                </div>
 						            </div>
 								</div>
-								<h4>学生</h4>
+								<!-- <h4>学生</h4> -->
 							</div>
 						</div>
 					</div>
@@ -144,7 +167,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="row-fluid" id="div_notice">
+		<!-- <div class="row-fluid" id="div_notice">
 			<div class="span12">
 				<div class="jumbotron1">
 					<h3 class="title-responsive" style="color:blue;"><i class="glyphicon glyphicon-envelope"></i>&nbsp;通知消息</h3>
@@ -161,54 +184,6 @@
 		                                <a href="#"><i class="fa fa-trash-o "></i></a>
 		                            </div>
 		                        </li>
-		                        <li>
-		                            <div>
-		                                <small>11:08:33 16-04-2014</small>
-		                                <h4>Latin professor at Hampden-Sydney </h4>
-		                                <p>The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-		                                <a href="#"><i class="fa fa-trash-o "></i></a>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div>
-		                                <small>9:12:28 10-04-2014</small>
-		                                <h4>The standard chunk of Lorem</h4>
-		                                <p>Ipsum used since the 1500s is reproduced below for those interested.</p>
-		                                <a href="#"><i class="fa fa-trash-o "></i></a>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div>
-		                                <small>3:33:12 6-03-2014</small>
-		                                <h4>The generated Lorem Ipsum </h4>
-		                                <p>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-		                                <a href="#"><i class="fa fa-trash-o "></i></a>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div>
-		                                <small>5:20:11 4-04-2014</small>
-		                                <h4>Contrary to popular belief</h4>
-		                                <p>Hampden-Sydney College in Virginia, looked up one.</p>
-		                                <a href="#"><i class="fa fa-trash-o "></i></a>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div>
-		                                <small>2:10:12 4-05-2014</small>
-		                                <h4>There are many variations</h4>
-		                                <p>All the Lorem Ipsum generators on the Internet .</p>
-		                                <a href="#"><i class="fa fa-trash-o "></i></a>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div>
-		                                <small>10:15:26 6-04-2014</small>
-		                                <h4>Ipsum used standard chunk of Lorem</h4>
-		                                <p>Standard chunk  is reproduced below for those.</p>
-		                                <a href="#"><i class="fa fa-trash-o "></i></a>
-		                            </div>
-		                        </li>
 		                    </ul>
 							</div>
 							
@@ -217,7 +192,7 @@
 					
 				</div>
 			</div>
-		</div>
+		</div> -->
 	 </div>
 	
 	<nav id="footer" class="footer">

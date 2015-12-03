@@ -180,6 +180,21 @@ $(function(){
 	
 	loadMyMenus();
 	
+	//百度editor
+    var ue = UE.getEditor('summernote');
+	
+	$("textarea").each(function(){
+		$(this).focus(function(){
+			var title = $(this).attr("title");
+			var id = $(this).attr("id");
+			$("#summernote_confirm").attr("target_id",id);
+//			$('#summernote').code($(this).val());
+			//换成ueditor
+			ue.setContent($(this).val());
+			openSummerNote(title);
+		});
+	});
+	
 	$('#data_table').bootstrapTable({
 	    method: 'GET',
 	    url: contextPath+'/listpagedstudentprojects.do',//分页查询,在StudentProjectController.java中
@@ -238,7 +253,14 @@ $(function(){
 			{
 				field : 'proj_results',
 				title : '项目成果',
-				align : 'center'
+				align : 'center',
+				formatter : function(value,row,index){
+					if(valueIsNotEmpty(value)){
+						return value.replace(/<[^>]+>/g,"");
+					}else{
+						return "无";
+					}
+				}
 			}
 	    
 	    ],
@@ -258,6 +280,8 @@ $(function(){
 				edit();
 			}else if(btn_id=="remove"){
 				remove();
+			}else if(btn_id=="summernote_confirm"){
+				getContent();
 			}
 		});
 	});

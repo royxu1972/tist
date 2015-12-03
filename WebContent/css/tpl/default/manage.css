@@ -332,7 +332,7 @@
 
 .ui-form-item-label { /*单行文本标签*/
 	float:left;
-	width: 12%;
+	width: 25%;
 	padding-right:5px;
 	text-align: right;
 	color: #333;

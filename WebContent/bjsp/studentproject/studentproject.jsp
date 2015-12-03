@@ -4,6 +4,7 @@
 <html lang="zh-CN">
 <head>
 <jsp:include page="/public/jsp/bootstrapInc.jsp"></jsp:include>
+<jsp:include page="/public/jsp/ueditorInc.jsp"></jsp:include>
 <title>学生项目</title>
 </head>
 <body>
@@ -97,7 +98,7 @@
 				  <div class="form-group">
 				    <label for="proj_results" class="col-sm-3 control-label">项目成果</label>
 				    <div class="col-sm-9">
-				      <textarea rows="5" class="form-control" id="proj_results" name="proj_results"></textarea>
+				      <textarea rows="5" class="form-control" id="proj_results" name="proj_results" title="项目成果"></textarea>
 				    </div>
 				  </div>
 				  <div class="form-group">
@@ -144,6 +145,8 @@
 	    </div>
 	  </div>
 	</div>
+	
+	<jsp:include page="/public/jsp/ueditor_dialog.jsp"></jsp:include>
 	
 <!-- 多文件上传js -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/public/js/ajaxfileupload_new.js"></script>

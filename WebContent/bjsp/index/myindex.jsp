@@ -30,7 +30,7 @@
 	         <span class="icon-bar"></span>
 	         <span class="icon-bar"></span>
 	       </button>
-	       <a class="navbar-brand" href="${pageContext.request.contextPath}/bjsp/login/login.jsp">Royxu</a>
+	       <a class="navbar-brand" href="${pageContext.request.contextPath}/bjsp/login/login.jsp">TIST</a>
 	     </div>
 	     <div id="navbar" class="navbar-collapse collapse">
 	       <ul class="nav navbar-nav navbar-left">
