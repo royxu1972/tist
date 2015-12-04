@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/pinboard.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/contact.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/message.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/animate.css" />
 <title>Group Information</title>
 </head>
 <body>
@@ -41,7 +42,7 @@
 		<ul>
 			<li class="dropdown">
 				<a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-					<i class="glyphicon glyphicon-bell"></i><span class="label label-warning">3</span>
+					<i class="glyphicon glyphicon-bell animated shake"></i><span class="label label-warning animated bounceIn">3</span>
 				</a>
                  <ul class="dropdown-menu dropdown-messages" id="ul_messages">
                      <li>
@@ -195,7 +196,7 @@
 		<div class="row-fluid" id="project">
 			<div class="span12">
 				<div class="jumbotron1">
-					<h3 class="title-responsive"><i class="glyphicon glyphicon-tags"></i>&nbsp;科研项目</h3>
+					<h3 class="title-responsive"><i class="glyphicon glyphicon-tags"></i>&nbsp;项目一览</h3>
 					
 					<div class="container-fluid">
 						<div class="row-fluid">

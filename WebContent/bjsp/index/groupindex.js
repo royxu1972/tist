@@ -65,7 +65,7 @@ function loadGroupMembers(){
         				if(valueIsNotEmpty(item.member_role)){
         					member_role = item.member_role;
         				}
-        				var html = 	"<div class='col-lg-4'>" +
+        				var html = 	"<div class='col-lg-4 animated flipInX'>" +
         								"<div class='contact-box'>" +
         									"<a target='_blank' href='"+member_site+"'>" +
 	        									"<div class='col-sm-4'>" +
@@ -122,7 +122,7 @@ function loadPagedNotices(){
 //	            							"<a href='#'><i class='fa fa-trash-o'></i></a>" +
 //            							"</div>" +
 //            						"</li>";
-            			var html = 	"<li>" +
+            			var html = 	"<li class='animated fadeInRight'>" +
 										"<div class='dropdown-messages-box'>" +
 											"<div class='media-body'>" +
 //												"<small class='pull-right'>"+item.notice_time+"</small>" +
@@ -186,7 +186,7 @@ function loadScienceProjects(){
         success: function(result) {
         	$("#ul_proj").empty();
         	for(var i=0;i<result.rows.length;i++){
-				var html = 	"<li class='span4'>" +
+				var html = 	"<li class='span4 animated fadeInRight'>" +
 								"<div class='thumbnail1'>" +
 									"<div class='caption'>" +
 										"<h4>" + result.rows[i].proj_name + "</h4>" +

@@ -183,7 +183,7 @@ public class ScienceProject extends BaseDomain {
 		this.file_types = file_types;
 	}
 	
-	@Formula("(select d.sort from sys_dict d where d.name=proj_status)")
+	@Formula("(select d.sort from sys_dict d where d.name=proj_status and d.del_flag='0' limit 0,1)")
 	public String getProj_status_sort() {
 		return proj_status_sort;
 	}
