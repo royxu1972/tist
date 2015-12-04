@@ -176,9 +176,59 @@ function removeFile(file_id,related_id,cur_file_i,path){
 	}
 }
 
+function loadProjType() {
+	$.ajax({
+        type: "POST",
+        url: contextPath + '/listdictbyfatherid.do',
+        data:{father_id:"1"},
+        dataType: 'json',
+        success: function(result) {
+            $("#proj_type").empty();
+            if(result.success){
+            	$.each(result.rows,function(idx,item){
+                	var option = "<option value='"+item.name+"'>"+item.name+"</option>";
+                	$("#proj_type").append(option);
+                });
+            }else{
+            	$.messager.show({
+        			title : '提示信息：',
+        			msg :'加载项目类型失败'
+        		});
+            }
+            
+        }
+    });
+}
+
+function loadProjStatus() {
+	$.ajax({
+		type: "POST",
+		url: contextPath + '/listdictbyfatherid.do',
+		data:{father_id:"2"},
+		dataType: 'json',
+		success: function(result) {
+			$("#proj_status").empty();
+			if(result.success){
+				$.each(result.rows,function(idx,item){
+					var option = "<option value='"+item.name+"'>"+item.name+"</option>";
+					$("#proj_status").append(option);
+				});
+			}else{
+				$.messager.show({
+					title : '提示信息：',
+					msg :'加载项目类型失败'
+				});
+			}
+			
+		}
+	});
+}
+
 $(function(){
 	
 	loadMyMenus();
+	loadProjType();
+	loadProjStatus();
 	
 	$('#data_table').bootstrapTable({
 	    method: 'GET',

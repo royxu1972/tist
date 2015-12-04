@@ -27,6 +27,8 @@ public class ScienceProject extends BaseDomain {
 	private String start_date;// 开始日期
 	private String end_date;// 结束日期
 	private String proj_fund;// 项目经费
+	private String proj_type;// 项目类型 (科研项目 教研项目 开发)
+	private String proj_status;// 项目状态 (在研 结题)
 	private String my_work;// 我承担的工作
 	private String proj_info;// 项目介绍
 	private String user_no;// 所属人员编号
@@ -35,6 +37,7 @@ public class ScienceProject extends BaseDomain {
 	private String file_paths;//文件路径
 	private String file_ids;//文件主键id
 	private String file_types;//文件类型
+	private String proj_status_sort;// 项目类型
 	
 	@Id
 	@Column(columnDefinition="varchar(30) comment '项目主键id'")
@@ -91,6 +94,24 @@ public class ScienceProject extends BaseDomain {
 		this.proj_fund = proj_fund;
 	}
 	
+	@Column(columnDefinition="varchar(100) comment '项目类型'")
+	public String getProj_type() {
+		return proj_type;
+	}
+
+	public void setProj_type(String proj_type) {
+		this.proj_type = proj_type;
+	}
+
+	@Column(columnDefinition="varchar(100) comment '项目状态'")
+	public String getProj_status() {
+		return proj_status;
+	}
+
+	public void setProj_status(String proj_status) {
+		this.proj_status = proj_status;
+	}
+
 	@Column(columnDefinition="varchar(1024) comment '我承担的工作'")
 	public String getMy_work() {
 		return this.my_work;
@@ -162,7 +183,15 @@ public class ScienceProject extends BaseDomain {
 		this.file_types = file_types;
 	}
 	
-	
+	@Formula("(select d.sort from sys_dict d where d.name=proj_status)")
+	public String getProj_status_sort() {
+		return proj_status_sort;
+	}
+
+	public void setProj_status_sort(String proj_status_sort) {
+		this.proj_status_sort = proj_status_sort;
+	}
+
 	@Override
 	public String toString() {
 		return "{" +

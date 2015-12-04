@@ -63,6 +63,8 @@ public class ScienceProjectServiceImpl {
 		if(!StringUtil.isEmpty(searchScienceProject.getS_user_no())){
 			hql += " and user_no = '"+searchScienceProject.getS_user_no()+"' ";
 		}
+		//根据开始日期倒序
+		hql += " order by start_date desc,proj_status_sort asc ";
 		
 		Page page = scienceProjectDao.pagedQuery(hql, pageNo,pageSize, conditions);
 		return page;

@@ -55,3 +55,40 @@
 	border-top: 1px solid #E5E5E5;
 	background-color: #F5F5F5;
 }
+
+#paper {
+	color: #FFF;
+	background: #2C3E50 none repeat scroll 0% 0%;
+	padding: 50px 0px;
+}
+
+ol, ul {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-right: 25px;
+}
+
+#ol_paper li {
+	font-size: 15px;
+	padding: 5px;
+}
+
+#ul_proj > li {
+	margin-left: 1.5%;
+}
+
+.thumbnail1 {
+	min-height: 170px;
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    line-height: 1.42857;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    transition: border 0.2s ease-in-out 0s;
+}
+
+.caption > p {
+	word-break: break-all;
+}

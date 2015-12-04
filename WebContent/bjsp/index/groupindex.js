@@ -126,9 +126,11 @@ function loadPagedNotices(){
 										"<div class='dropdown-messages-box'>" +
 											"<div class='media-body'>" +
 //												"<small class='pull-right'>"+item.notice_time+"</small>" +
-												"<p style='text-align: center;'><strong>"+item.notice_title+"</strong></p>" +
+												"<p style='text-align: center;margin-bottom:3px;'>" +
+													"<strong>"+item.notice_title+"</strong><br/>" +
+													"<small><b>"+item.notice_time+"</b></small>" +
+												"</p>" +
 												"<p style='text-indent:2em;'>"+item.notice_content+"</p>" +
-												"<small><b>"+item.notice_time+"</b></small>" +
 											"</div>" +
 										"</div>" +
 									"</li>" +
@@ -145,8 +147,68 @@ function loadPagedNotices(){
     });
 }
 
+/**
+ * 加载“已发表文献”
+ */
+function loadPapers(){
+	$.ajax({
+		type: "POST",
+		url: contextPath + '/findpapers.do',
+		async : false,
+		success: function(result) {
+			$("#ol_paper").empty();
+			for(var i=0;i<result.rows.length;i++){
+				var paper_href = "#";
+        		if(valueIsNotEmpty(result.rows[i].file_paths)){
+        			var new_name = result.rows[i].file_paths.substring(result.rows[i].file_paths.indexOf("/attachment/")+12,result.rows[i].file_paths.length);
+        			paper_href = contextPath+"/download.do?file_name="+new_name+"&old_name="+result.rows[i].old_names;
+        		}
+//        		console.info(paper_href);
+				var html = 	"<li>" +
+								result.rows[i].author + ",<a href='"+paper_href+"'>" + result.rows[i].title + "</a>," +
+								result.rows[i].journal + "," + result.rows[i].publish_time + "&nbsp;" +
+							"</li>";
+				$("#ol_paper").append(html);
+			}
+		}
+	});
+}
+
+/**
+ * 加载“科研项目”
+ */
+function loadScienceProjects(){
+	$.ajax({
+        type: "POST",
+        url: contextPath + '/listscienceprojects.do',
+        data: {page: 1,rows: 9},
+        async : false,
+        success: function(result) {
+        	$("#ul_proj").empty();
+        	for(var i=0;i<result.rows.length;i++){
+				var html = 	"<li class='span4'>" +
+								"<div class='thumbnail1'>" +
+									"<div class='caption'>" +
+										"<h4>" + result.rows[i].proj_name + "</h4>" +
+										"<p>" + result.rows[i].proj_info + "</p>" +
+										"<p>" +
+											"<a target='_blank' class='btn btn-info btn-sm' href='"+contextPath+"/bjsp/index/scienceprojectinfo.jsp?proj_id="+result.rows[i].proj_id+"'>" +
+												"<i class='glyphicon glyphicon-eye-open'></i>&nbsp;浏览" +
+											"</a>" +
+										"</p>" +
+									"</div>" +
+								"</div>" +
+							"</li>";
+				$("#ul_proj").append(html);
+			}
+        }
+    });
+}
+
 $(function(){
 	loadGroupinfos();
 	loadGroupMembers();
 	loadPagedNotices();
+	loadPapers();
+	loadScienceProjects();
 });

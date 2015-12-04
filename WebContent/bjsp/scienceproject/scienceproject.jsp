@@ -95,6 +95,18 @@
 				    </div>
 				  </div>
 				  <div class="form-group">
+				    <label for="proj_type" class="col-sm-3 control-label">项目类型</label>
+				    <div class="col-sm-9">
+				      <select class="form-control" id="proj_type" name="proj_type"></select>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="proj_status" class="col-sm-3 control-label">项目状态</label>
+				    <div class="col-sm-9">
+				      <select class="form-control" id="proj_status" name="proj_status"></select>
+				    </div>
+				  </div>
+				  <div class="form-group">
 				    <label for="proj_info" class="col-sm-3 control-label">项目介绍</label>
 				    <div class="col-sm-9">
 				      <textarea rows="5" class="form-control" id="proj_info" name="proj_info"></textarea>

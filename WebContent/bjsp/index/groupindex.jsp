@@ -167,32 +167,63 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="row-fluid" id="div_notice">
+		<div class="row-fluid" id="paper">
 			<div class="span12">
 				<div class="jumbotron1">
-					<h3 class="title-responsive" style="color:blue;"><i class="glyphicon glyphicon-envelope"></i>&nbsp;通知消息</h3>
+					<h3 class="title-responsive"><i class="glyphicon glyphicon-book"></i>&nbsp;已发表文献</h3>
 					
 					<div class="container-fluid">
 						<div class="row-fluid">
 							<div class="span12">
-							<ul class="notes" id="notices">
-		                        <li>
-		                            <div>
-		                                <small>12:03:28 12-04-2014</small>
-		                                <h4>Long established fact</h4>
-		                                <p>The years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-		                                <a href="#"><i class="fa fa-trash-o "></i></a>
-		                            </div>
-		                        </li>
-		                    </ul>
+								<ol id="ol_paper">
+									<li>
+										梁轰,王江平,徐家喜,<a href="#">基于Android的校园网站客户端的设计与实现</a>,电脑知识与技术,2015-06
+										<a href="#"><i class="glyphicon glyphicon-circle-arrow-down"></i>下载文献附件</a>
+									</li>
+									<li>
+										梁轰,王江平,徐家喜,<a href="#">公钥证书在Android APP访问校园网中的应用</a>,南京晓庄学院学报,2014-12
+										<a href="#"><i class="glyphicon glyphicon-circle-arrow-down"></i>下载文献附件</a>
+									</li>
+								</ol>
 							</div>
-							
 						</div>
 					</div>
 					
 				</div>
 			</div>
-		</div> -->
+		</div>
+		<div class="row-fluid" id="project">
+			<div class="span12">
+				<div class="jumbotron1">
+					<h3 class="title-responsive"><i class="glyphicon glyphicon-tags"></i>&nbsp;科研项目</h3>
+					
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<ul class="thumbnails" id="ul_proj">
+									<li class="span4">
+										<div class="thumbnail1">
+											<div class="caption">
+												<h4>
+													冯诺尔曼结构
+												</h4>
+												<p>
+													也称普林斯顿结构，是一种将程序指令存储器和数据存储器合并在一起的存储器结构。程序指令存储地址和数据存储地址指向同一个存储器的不同物理位置。
+												</p>
+												<p>
+													<a class="btn btn-info btn-sm" href="#"><i class="glyphicon glyphicon-eye-open"></i>&nbsp;浏览</a>
+												</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
 	 </div>
 	
 	<nav id="footer" class="footer">
@@ -200,5 +231,11 @@
 	</nav>
 <!-- 模块增删改查主要js -->
 <script type="text/javascript" src="${pageContext.request.contextPath}/bjsp/index/groupindex.js"></script>
+<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1256890950'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256890950%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));
+	//$("#footer").append(unescape("%3Cspan id='cnzz_stat_icon_1256890950'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1256890950%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));
+	$("#cnzz_stat_icon_1256890950").appendTo($("#footer"));
+</script>
 </body>
 </html>
