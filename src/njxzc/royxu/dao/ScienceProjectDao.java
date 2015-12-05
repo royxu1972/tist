@@ -77,6 +77,9 @@ public class ScienceProjectDao extends BaseDao<ScienceProject> {
 			hql += " and user_no = '"+searchScienceProject.getS_user_no()+"' ";
 		}
 		
+		//根据开始日期倒序
+		hql += " order by start_date desc,proj_status_sort asc ";
+		
 		List<ScienceProject> scienceprojects = (List<ScienceProject>) find(hql);
 		return scienceprojects;
 	}

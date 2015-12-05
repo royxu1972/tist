@@ -104,6 +104,7 @@ public class PaperController {
 		ModelAndView mav = new ModelAndView("jsonView");
 		try{
 			Page pageData = paperService.getSysParams(page, rows,searchPaper);
+			mav.addObject("current_page", page);
 			mav.addObject("total", pageData.getTotalCount());
 			mav.addObject("rows", pageData.getData());
 			mav.addObject("success",true);

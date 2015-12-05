@@ -92,3 +92,13 @@ ol, ul {
 .caption > p {
 	word-break: break-all;
 }
+
+#goods_page > li > a.active {
+	background-color: rgb(51, 122, 183);
+	color: rgb(255, 255, 255);
+}
+
+#ol_paper > li > a {
+	color: #74BFFF;
+	text-decoration: none;
+} 

@@ -150,12 +150,52 @@ function loadPagedNotices(){
 /**
  * 加载“已发表文献”
  */
-function loadPapers(){
+function loadPapers(pageNo,PageSize){
 	$.ajax({
 		type: "POST",
-		url: contextPath + '/findpapers.do',
+		url: contextPath + '/listpapers.do',
+		data: {page: pageNo, rows: PageSize},
 		async : false,
 		success: function(result) {
+			
+			//显示显示页码
+			$("#goods_page").empty();
+			var html='<li><a id="pre_page">&laquo;</a></li>';
+			$("#goods_page").append(html);
+			var total=Math.ceil(result.total/9);
+			total_page = total;
+			for(var i=1;i<=total;i++){
+				if(pageNo == i) html = '<li><a onclick="loadPapers(\''+i+'\',\''+'9'+'\');" class="active">'+i+'</a></li>';
+				else html = '<li><a onclick="loadPapers(\''+i+'\',\''+'9'+'\');">'+i+'</a></li>';
+				$("#goods_page").append(html);
+			}
+			html='<li><a id="next_page">&raquo;</a></li>';
+			$("#goods_page").append(html);
+			
+			//显示当前页码和总页码
+//			$("#current_page").text(result.current_page);
+//			$("#total_page").text(total_page);
+			
+			//判断是否有上一页和下一页
+			if(total_page==1||total_page==0){
+//				$("#goods_page").empty();
+				$("#goods_page").parent().parent().remove();
+			}
+			else if(total_page>=2){
+				if(result.current_page==1){
+					$("#pre_page").hide();
+					$("#next_page").show();
+					$("#next_page").attr("onclick","loadPapers('"+(result.current_page+1)+"','9');");
+				}else if(result.current_page==total_page){
+					$("#next_page").hide();
+					$("#pre_page").show();
+					$("#pre_page").attr("onclick","loadPapers('"+(result.current_page-1)+"','9');");
+				}else{
+					$("#pre_page").attr("onclick","loadPapers('"+(result.current_page-1)+"','9');");
+					$("#next_page").attr("onclick","loadPapers('"+(result.current_page+1)+"','9');");
+				}
+			}
+			
 			$("#ol_paper").empty();
 			for(var i=0;i<result.rows.length;i++){
 				var paper_href = "#";
@@ -240,6 +280,6 @@ $(function(){
 	loadGroupinfos();
 	loadGroupMembers();
 	loadPagedNotices();
-	loadPapers();
+	loadPapers(1,9);
 	loadScienceProjects();
 });

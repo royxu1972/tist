@@ -62,6 +62,8 @@ public class PaperServiceImpl {
 			hql += " and user_no = '"+searchPaper.getS_user_no()+"' ";
 		}
 		
+		hql += " order by publish_time desc ";
+		
 		Page page = paperDao.pagedQuery(hql, pageNo,pageSize, conditions);
 		return page;
 	}
@@ -92,6 +94,8 @@ public class PaperServiceImpl {
 		if(!StringUtil.isEmpty(searchPaper.getS_user_no())){
 			hql += " and user_no = '"+searchPaper.getS_user_no()+"' ";
 		}
+		
+		hql += " order by publish_time desc ";
 		
 		Page page = paperDao.pagedQuery2(hql, offset,pageSize, conditions);
 		return page;

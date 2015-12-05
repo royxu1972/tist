@@ -187,6 +187,20 @@
 									</li>
 								</ol>
 							</div>
+							<div class="span12" align="center">
+								<div>
+									<ul class="pagination" id="goods_page">
+										<li><a href="#">&laquo;</a></li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li><a href="#">&raquo;</a></li>
+									</ul>
+								</div>
+								<!-- <div>当前第&nbsp;<span id="current_page"></span>&nbsp;页，共&nbsp;<span id="total_page"></span>&nbsp;页</div> -->
+							</div>
 						</div>
 					</div>
 					
