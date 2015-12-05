@@ -199,9 +199,40 @@ function loadScienceProjects(){
 									"</div>" +
 								"</div>" +
 							"</li>";
+//				var html = 	"<li class='span4 animated fadeInRight'>" +
+//								"<div class='thumbnail1'>" +
+//									"<div class='caption'>" +
+//										"<h4>" + result.rows[i].proj_name + "</h4>" +
+//										"<p>" + result.rows[i].proj_info + "</p>" +
+//										"<p>" +
+//											"<a class='btn btn-info btn-sm proj_btn' id='btn_proj_"+i+"' onclick='popoverPrjInfo(\"btn_proj_"+i+"\",\""+result.rows[i].proj_id+"\")'>" +
+//												"<i class='glyphicon glyphicon-eye-open'></i>&nbsp;浏览" +
+//											"</a>" +
+//										"</p>" +
+//									"</div>" +
+//								"</div>" +
+//							"</li>";
 				$("#ul_proj").append(html);
 			}
         }
+    });
+}
+
+function popoverPrjInfo(btn_id, proj_id){
+//	alert(btn_id+"\n"+proj_id);
+    $("#"+btn_id).popover({
+//      trigger: 'focus',
+      placement: 'top', //top, bottom, left or right
+      title: "title",
+      html: 'true',
+      content: "fdafdjasfhdskj",
+    }).popover("show").on("mouseleave", function () {
+        var _this = this;
+        setTimeout(function () {
+          if (!$(".popover:hover").length) {
+            $(_this).popover("hide");
+          }
+        }, 100);
     });
 }
 

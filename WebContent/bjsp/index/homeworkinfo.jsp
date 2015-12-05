@@ -5,6 +5,7 @@
 <head>
 <jsp:include page="/public/jsp/bootstrapInc.jsp"></jsp:include>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/index.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/filemanager.css" />
 <style type="text/css">
 .jumbotron {
 	width: 70%;
@@ -36,32 +37,68 @@
 			<div class="span12">
 				<div class="row-fluid">
 					<div class="span12">
-						<div class="jumbotron">
+						<div style="width:80%;margin-left:auto;margin-right:auto;">
 						  <h1 id="homework_name" class="info">作业名称</h1>
+						  
+						  <div class="tabbable" id="tabs-628925">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#panel-808950" data-toggle="tab">作业要求</a>
+								</li>
+								<li>
+									<a href="#panel-853703" data-toggle="tab">附件下载</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="panel-808950">
+									<dl class="dl-horizontal" style="margin-top:15px;">
+										<dt>
+											发布时间
+										</dt>
+										<dd id="edit_time" class="info">
+											2015-10-01 22:30:12
+										</dd>
+										<dt>
+											作业要求
+										</dt>
+										<dd id="homework_request" class="info">
+											xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>
+											xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>
+											xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>
+											xxxxxxxxxxxxxxxxxxxxxx<br/>
+										</dd>
+									</dl>
+								</div>
+								
+								<div class="tab-pane" id="panel-853703">
+									<div class="col-lg-12" id="course_files" style="margin-left:20px;">
+									
+			                            <div class="file-box">
+			                                <div class="file">
+			                                    <a href="#">
+			                                        <span class="corner"></span>
+			
+			                                        <div class="icon">
+			                                            <i class="glyphicon glyphicon-file"></i>
+			                                        </div>
+			                                        <div class="file-name">
+			                                            Document_2014.doc
+			                                            <br/>
+			                                            <small>Added: Jan 11, 2014</small>
+			                                        </div>
+			                                    </a>
+			                                </div>
+			                            </div>
+			
+			                        </div>
+								</div>
+							</div>
+						</div>
+						  <!--  -->
 						  
 						  <p>
 						  	<dl class="dl-horizontal">
-								<dt>
-									最后修改时间
-								</dt>
-								<dd id="edit_time" class="info">
-									2015-10-01 22:30:12
-								</dd>
-								<dt>
-									作业要求
-								</dt>
-								<dd id="homework_request" class="info" style="border:1px solid #000000;">
-									xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>
-									xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>
-									xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br/>
-									xxxxxxxxxxxxxxxxxxxxxx<br/>
-								</dd>
-								<dt>
-									作业附件下载
-								</dt>
-								<dd id="file_list" class="info">
-									卡地亚拥有150多年历史，是法国珠宝金银首饰的制造名家。
-								</dd>
+								
 							</dl>
 						  </p>
 						  
@@ -80,6 +117,7 @@ function loadInfo(){
 		async : false,
 		success: function(result) {
 			//console.info(result);
+			$("#course_files").empty();
 			if(result.rows.length > 0){
 				$(".info").empty();
 				var row = result.rows[0];
@@ -93,13 +131,25 @@ function loadInfo(){
 					for(var i=0;i<names.length;i++){
 						var current_name = names[i];
 						var new_name = paths[i].substring(paths[i].indexOf("/attachment/")+12,paths[i].length);
-						var file_id = fileids[i];
-//						console.info("current_name="+current_name+"\n"+"current_path="+new_name);
-						var file_link = "<div id='cur_file_"+i+"'>" +
-											"<a target='_blank' href='"+contextPath+"/download.do?file_name="+new_name+"&old_name="+current_name+"'>"+current_name+"</a>" +
-											"&nbsp;&nbsp;" +
-										"</div>";
-						$("#file_list").append(file_link);
+						var href = contextPath+"/download.do?file_name="+new_name+"&old_name="+encodeURI(encodeURI(current_name));
+						var img = "xls96.png";
+						if(new_name.indexOf("doc")>0) img = "word96.png";
+						if(new_name.indexOf("xls")>0) img = "xls96.png";
+						if(new_name.indexOf("ppt")>0) img = "ppt96.png";
+						var html = 	"<div class='file-box'>" +
+										"<div class='file'>" +
+											"<a target='_blank' href='" + href + "'>" +
+												"<span class='corner'></span>" +
+												"<div class='image'>" +
+													"<img alt='image' class='img-responsive' src='imgs/"+img+"' style='margin-left:auto;margin-right:auto;'>" +
+												"</div>" +
+												"<div class='file-name'>" +
+													current_name+"<br>" +
+												"</div>" +
+											"</a>" +
+										"</div>" +
+									"</div>";
+						$("#course_files").append(html);
 					}
 				}
 			}else{

@@ -5,6 +5,7 @@
 <head>
 <jsp:include page="/public/jsp/bootstrapInc.jsp"></jsp:include>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/index.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/bjsp/index/filemanager.css" />
 <style type="text/css">
 .jumbotron {
 	width: 70%;
@@ -36,56 +37,63 @@
 			<div class="span12">
 				<div class="row-fluid">
 					<div class="span12">
-						<div class="jumbotron">
+						<div style="width:80%;margin-left:auto;margin-right:auto;">
 						  <h1 id="stu_proj_name" class="info">学生项目名称</h1>
 						  
-						  <p>
-						  	<dl class="dl-horizontal">
-								<dt>
-									项目负责人
-								</dt>
-								<dd id="main_students" class="info">
-									季啸,何映蝶
-								</dd>
-								<dt>
-									其他成员
-								</dt>
-								<dd id="proj_members" class="info">
-									梁轰,袁春雷,黄会,袁春雷
-								</dd>
-								<dt>
-									指导老师
-								</dt>
-								<dd id="teachers" class="info">
-									王江平,徐家喜
-								</dd>
-								<dt>
-									项目级别
-								</dt>
-								<dd id="stu_proj_rank" class="info">
-									省级
-								</dd>
-								<dt>
-									项目类型
-								</dt>
-								<dd id="stu_proj_type" class="info">
-									大学生创新项目
-								</dd>
-								<dt>
-									项目成果
-								</dt>
-								<dd id="proj_results" class="info">
-									xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxz
-									xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-								</dd>
-								<dt>
-									项目附件下载
-								</dt>
-								<dd id="file_list" class="info">
-									卡地亚拥有150多年历史，是法国珠宝金银首饰的制造名家。
-								</dd>
-							</dl>
-						  </p>
+						  <div class="tabbable" id="tabs-628925">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#panel-808950" data-toggle="tab">基本信息</a>
+								</li>
+								<li>
+									<a href="#panel-853703" data-toggle="tab">附件下载</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="panel-808950">
+									<dl class="dl-horizontal" style="margin-top:15px;">
+										<dt>
+											项目负责人
+										</dt>
+										<dd id="main_students" class="info">
+											季啸,何映蝶
+										</dd>
+										<dt>
+											其他成员
+										</dt>
+										<dd id="proj_members" class="info">
+											梁轰,袁春雷,黄会,袁春雷
+										</dd>
+										<dt>
+											指导老师
+										</dt>
+										<dd id="teachers" class="info">
+											王江平,徐家喜
+										</dd>
+										<dt>
+											项目级别
+										</dt>
+										<dd id="stu_proj_rank" class="info">
+											省级
+										</dd>
+										<dt>
+											项目类型
+										</dt>
+										<dd id="stu_proj_type" class="info">
+											大学生创新项目
+										</dd>
+										<dt>
+											项目成果
+										</dt>
+										<dd class="row info" id="proj_results"></dd>
+										
+									</dl>
+								</div>
+								<div class="tab-pane" id="panel-853703">
+									<div id="file_list" class="info" style="margin-left:20px;"></div>
+								</div>
+							</div>
+						</div>
 						  
 						</div>
 					</div>
@@ -117,15 +125,32 @@ function loadInfo(){
 					var paths = row.file_paths.split(",");
 					var fileids = row.file_ids.split(",");
 					for(var i=0;i<names.length;i++){
-						var current_name = names[i];
-						var new_name = paths[i].substring(paths[i].indexOf("/attachment/")+12,paths[i].length);
-						var file_id = fileids[i];
-//						console.info("current_name="+current_name+"\n"+"current_path="+new_name);
-						var file_link = "<div id='cur_file_"+i+"'>" +
-											"<a target='_blank' href='"+contextPath+"/download.do?file_name="+new_name+"&old_name="+current_name+"'>"+current_name+"</a>" +
-											"&nbsp;&nbsp;" +
+						var names = row.old_names.split(",");
+						var paths = row.file_paths.split(",");
+//						var fileids = row.file_ids.split(",");
+						for(var i=0;i<names.length;i++){
+							var current_name = names[i];
+							var new_name = paths[i].substring(paths[i].indexOf("/attachment/")+12,paths[i].length);
+							var href = contextPath+"/download.do?file_name="+new_name+"&old_name="+encodeURI(encodeURI(current_name));
+							var img = "xls96.png";
+							if(new_name.indexOf("doc")>0) img = "word96.png";
+							if(new_name.indexOf("xls")>0) img = "xls96.png";
+							if(new_name.indexOf("ppt")>0) img = "ppt96.png";
+							var html = 	"<div class='file-box'>" +
+											"<div class='file'>" +
+												"<a target='_blank' href='" + href + "'>" +
+													"<span class='corner'></span>" +
+													"<div class='image'>" +
+														"<img alt='image' class='img-responsive' src='imgs/"+img+"' style='margin-left:auto;margin-right:auto;'>" +
+													"</div>" +
+													"<div class='file-name'>" +
+														current_name+"<br>" +
+													"</div>" +
+												"</a>" +
+											"</div>" +
 										"</div>";
-						$("#file_list").append(file_link);
+							$("#file_list").append(html);
+						}
 					}
 				}
 			}else{

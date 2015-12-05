@@ -49,6 +49,8 @@ public class AttachmentController {
 	@RequestMapping(value="/download") 
     public void downloadFile(String file_name,String old_name,String file_type,HttpServletRequest request,HttpServletResponse response) throws UnsupportedEncodingException{  
 		old_name = java.net.URLDecoder.decode(old_name,"UTF8");
+		//必须去掉空格,否则文件下载无后缀名
+		old_name = old_name.replaceAll(" ", "");
 		response.setCharacterEncoding("utf-8");
         response.setContentType("multipart/form-data");  
         System.err.println("old_name:"+old_name);

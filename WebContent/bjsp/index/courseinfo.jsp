@@ -27,97 +27,63 @@
 			<div class="span12">
 				<div class="row-fluid">
 					<div class="span12">
-						<div class="jumbotron" style="width:80%;margin-left:auto;margin-right:auto";>
-						  <h2 id="course_name" class="info">课程名称</h2>
+						<div style="width:80%;margin-left:auto;margin-right:auto;">
+						  <h1 id="course_name" class="info">课程名称</h1>
 						  
-						  <p>
-						  	<dt>
-								课程简介
-							</dt>
-							<dd id="introduction" class="info" style="text-indent:2em;">
-								暂无课程简介
-							</dd>
-						  	<dt>
-								课程大纲
-							</dt>
-							<dd id="outline" class="info" style="text-indent:2em;">
-								暂无课程大纲
-							</dd>
-						  </p>
+						  <div class="tabbable" id="tabs-628925">
+							<ul class="nav nav-tabs">
+								<li class="active">
+									<a href="#panel-808950" data-toggle="tab">课程信息</a>
+								</li>
+								<li>
+									<a href="#panel-853703" data-toggle="tab">课件下载</a>
+								</li>
+							</ul>
+							<div class="tab-content">
+								<div class="tab-pane active" id="panel-808950">
+									<dl class="dl-horizontal" style="margin-top:15px;">
+										<dt>
+											课程简介
+										</dt>
+										<dd id="introduction" class="info" style="text-indent:2em;">
+											暂无课程简介
+										</dd>
+									  	<dt>
+											课程大纲
+										</dt>
+										<dd id="outline" class="info" style="text-indent:2em;">
+											暂无课程大纲
+										</dd>
+									</dl>
+								</div>
+								
+								<div class="tab-pane" id="panel-853703">
+									<div class="col-lg-12" id="course_files" style="margin-left:20px;">
+									
+			                            <div class="file-box">
+			                                <div class="file">
+			                                    <a href="#">
+			                                        <span class="corner"></span>
+			
+			                                        <div class="icon">
+			                                            <i class="glyphicon glyphicon-file"></i>
+			                                        </div>
+			                                        <div class="file-name">
+			                                            Document_2014.doc
+			                                            <br/>
+			                                            <small>Added: Jan 11, 2014</small>
+			                                        </div>
+			                                    </a>
+			                                </div>
+			                            </div>
+			
+			                        </div>
+								</div>
+							</div>
+						</div>
 						  
 						</div>
 					</div>
-					<div class="row" style="width:73%;margin-left:auto;margin-right:auto;text-align:center;">
-                        <h3><strong>课件下载</strong></h3>
-                        <div class="col-lg-12" id="course_files">
-                            <div class="file-box">
-                                <div class="file">
-                                    <a href="#">
-                                        <span class="corner"></span>
-
-                                        <div class="icon">
-                                            <i class="glyphicon glyphicon-file"></i>
-                                        </div>
-                                        <div class="file-name">
-                                            Document_2014.doc
-                                            <br/>
-                                            <small>Added: Jan 11, 2014</small>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="file-box">
-                                <div class="file">
-                                    <a href="#">
-                                        <span class="corner"></span>
-
-                                        <div class="icon">
-                                            <i class="img-responsive glyphicon glyphicon-facetime-video"></i>
-                                        </div>
-                                        <div class="file-name">
-                                            Monica's birthday.mpg4
-                                            <br/>
-                                            <small>Added: Fab 18, 2014</small>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="file-box">
-                                <div class="file">
-                                    <a href="#">
-                                        <span class="corner"></span>
-
-                                        <div class="icon">
-                                            <i class="glyphicon glyphicon-picture"></i>
-                                        </div>
-                                        <div class="file-name">
-                                            Italy street.jpg
-                                            <br/>
-                                            <small>Added: Jan 6, 2014</small>
-                                        </div>
-                                    </a>
-
-                                </div>
-                            </div>
-                            <div class="file-box">
-                                <div class="file">
-                                    <a href="#">
-                                        <span class="corner"></span>
-
-                                        <div class="icon">
-                                            <i class="glyphicon glyphicon-music"></i>
-                                        </div>
-                                        <div class="file-name">
-                                            Michal Jackson.mp3
-                                            <br/>
-                                            <small>Added: Jan 22, 2014</small>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
 				</div>
 			</div>
 		</div>
