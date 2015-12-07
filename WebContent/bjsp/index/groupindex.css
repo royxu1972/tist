@@ -78,7 +78,7 @@ ol, ul {
 }
 
 .thumbnail1 {
-	min-height: 170px;
+	min-height: 220px;
     display: block;
     padding: 10px;
     margin-bottom: 20px;
@@ -102,3 +102,7 @@ ol, ul {
 	color: #74BFFF;
 	text-decoration: none;
 } 
+
+#ul_messages {
+	z-index: 2000;
+}

@@ -38,6 +38,7 @@ public class ScienceProject extends BaseDomain {
 	private String file_ids;//文件主键id
 	private String file_types;//文件类型
 	private String proj_status_sort;// 项目类型
+	private String member_name;// 成员姓名
 	
 	@Id
 	@Column(columnDefinition="varchar(30) comment '项目主键id'")
@@ -190,6 +191,15 @@ public class ScienceProject extends BaseDomain {
 
 	public void setProj_status_sort(String proj_status_sort) {
 		this.proj_status_sort = proj_status_sort;
+	}
+
+	@Formula("(select bi.name from roy_basic_info bi where bi.increment_id=user_no)")
+	public String getMember_name() {
+		return member_name;
+	}
+
+	public void setMember_name(String member_name) {
+		this.member_name = member_name;
 	}
 
 	@Override

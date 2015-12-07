@@ -69,11 +69,17 @@ function loadAllScienceProjects(){
         success: function(result) {
         	$("#ul_proj").empty();
         	for(var i=0;i<result.rows.length;i++){
+        		var proj_info = result.rows[i].proj_info;
+            	
+            	if(valueIsNotEmpty(proj_info)){
+            		proj_info = proj_info.replace("/<[^>]+>/g","");
+            		if(proj_info.length > 45) proj_info = proj_info.substring(0,45)+"...";
+            	}
 				var html = 	"<li class='span4'>" +
 								"<div class='thumbnail1'>" +
 									"<div class='caption'>" +
-										"<h4>" + result.rows[i].proj_name + "</h4>" +
-										"<p>" + result.rows[i].proj_info + "</p>" +
+										"<h4 style='min-height:40px;'>" + result.rows[i].proj_name + "</h4>" +
+										"<p>" + proj_info + "</p>" +
 										"<p>" +
 											"<a target='_blank' class='btn btn-info btn-sm' href='"+contextPath+"/bjsp/index/scienceprojectinfo.jsp?proj_id="+result.rows[i].proj_id+"'>" +
 												"<i class='glyphicon glyphicon-eye-open'></i>&nbsp;浏览" +
