@@ -55,6 +55,10 @@ ol, ul {
 	padding: 5px;
 }
 
+#ul_proj > li {
+	margin-left: 1.5%;
+}
+
 .ul_homework li {
 	font-size: 15px;
 	padding: 3px;
@@ -64,6 +68,7 @@ ol, ul {
 }
 
 .thumbnail1 {
+	min-height: 180px;
     display: block;
     padding: 4px;
     margin-bottom: 20px;

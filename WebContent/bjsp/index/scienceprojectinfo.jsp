@@ -61,7 +61,7 @@
 												<dt>承担工作</dt>
 												<dd id="my_work" class="info">主持</dd>
 												<dt>项目简介</dt>
-												<dd id="proj_info" class="info">
+												<dd id="proj_info" class="info" style="width:60%;">
 													xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxz
 													xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 												</dd>
